@@ -1,2 +1,1 @@
-# oonufrienko.github.io
-JS learning repo
+# js-learning
