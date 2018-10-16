@@ -13,13 +13,23 @@
 	text-align: center;
 }
 
-.text_font {
+.text_font_with_line {
 	width: 600px;
 	padding: 24px 0 24px 0;
 	font-family: Helvetica, sans-serif;
 	font-weight: normal;
 	font-size: 14px;
 	border-bottom: 1px solid #a9a9a9;
+	text-align: left;
+	margin: auto;
+}
+
+.text_font_without_line {
+	width: 600px;
+	padding: 24px 0 24px 0;
+	font-family: Helvetica, sans-serif;
+	font-weight: normal;
+	font-size: 14px;
 	text-align: left;
 	margin: auto;
 }
