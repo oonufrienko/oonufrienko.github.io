@@ -53,3 +53,7 @@
 .inner_text {
 	text-indent: 20px;
 }
+
+ul {
+	margin: 0 0 0 40px;
+}
