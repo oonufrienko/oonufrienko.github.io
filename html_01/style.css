@@ -14,19 +14,31 @@
 }
 
 .text_font {
-	width: 50%;
+	width: 600px;
 	padding: 24px 0 24px 0;
 	font-family: Helvetica, sans-serif;
 	font-weight: normal;
 	font-size: 14px;
 	border-bottom: 1px solid #a9a9a9;
-	text-align: center;
+	text-align: left;
+	margin: auto;
 }
 
-.text_font_bold {
-	width: 50%;
+.text_font_header {
+	padding: 20px 0 0 0;
+	width: 600px;
 	font-family: Helvetica, sans-serif;
 	font-weight: bold;
 	font-size: 15px;
+	text-align: left;
+	margin: auto;
+
+}
+
+.text_align {
 	text-align: center;
+}
+
+.inner_text {
+	text-indent: 20px;
 }
