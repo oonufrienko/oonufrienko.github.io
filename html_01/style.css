@@ -2,6 +2,31 @@
 	background: #eee;
 }
 
+.text_font_name {
+	font-family: Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 24px;
+    text-align: center;	
+}
+
+.img_align {
+	text-align: center;
+}
+
 .text_font {
-	font-family: Arial;
+	width: 50%;
+	padding: 24px 0 24px 0;
+	font-family: Helvetica, sans-serif;
+	font-weight: normal;
+	font-size: 14px;
+	border-bottom: 1px solid #a9a9a9;
+	text-align: center;
+}
+
+.text_font_bold {
+	width: 50%;
+	font-family: Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 15px;
+	text-align: center;
 }
