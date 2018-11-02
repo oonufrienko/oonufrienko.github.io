@@ -1,8 +1,8 @@
-.body_bg_color {
+.main {
 	background: #eee;
 }
 
-.text_font_name {
+.title {
 	font-family: Helvetica, sans-serif;
 	font-weight: bold;
 	font-size: 24px;
@@ -10,11 +10,11 @@
     padding: 20px;
 }
 
-.img_align {
+.main-image {
 	text-align: center;
 }
 
-.text_font_with_line {
+.main-font {
 	width: 600px;
 	padding: 24px 0 24px 0;
 	font-family: Helvetica, sans-serif;
@@ -25,7 +25,7 @@
 	margin: auto;
 }
 
-.text_font_without_line {
+.footer {
 	width: 600px;
 	padding: 24px 0 24px 0;
 	font-family: Helvetica, sans-serif;
@@ -35,7 +35,7 @@
 	margin: auto;
 }
 
-.text_font_header {
+.subtitle {
 	padding: 20px 0 0 0;
 	width: 600px;
 	font-family: Helvetica, sans-serif;
@@ -46,14 +46,10 @@
 
 }
 
-.text_align {
-	text-align: center;
-}
-
-.inner_text {
+.inner-text {
 	text-indent: 20px;
 }
 
-ul {
+.list {
 	margin: 0 0 0 40px;
 }
