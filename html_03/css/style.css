@@ -1,7 +1,18 @@
 /* HEADER */
-.text {
+.global-bg {
+    background-color: #f9f9f9;
+}
+
+.left-side,
+.right-side {
+    width: 154px;
+}
+
+.central-part {
     width: 300px;
     margin: 0 auto;
+    background-color: white;
+
 }
 /* MAIN-MENU */
 /* LEFT-MENU */
