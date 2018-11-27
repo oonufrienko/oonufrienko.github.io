@@ -75,6 +75,10 @@ html, body {
     padding: 30px 10px;
 }
 
+.description {
+    clear: both;
+}
+
 /* SIDEBAR */
 .sidebar_wrapper {
     float: left;
@@ -90,6 +94,12 @@ html, body {
     color: #767575;
     text-decoration: none;
 }
+
+.sidebar a.active {
+    color: black;
+    padding-left: 30px;
+}
+
 
 /* FOOTER */
 .footer {
