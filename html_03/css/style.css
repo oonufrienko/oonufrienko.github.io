@@ -1,43 +1,108 @@
-.global-bg {
-    background-color: #f9f9f9;
-}
-
-.left-side,
-.right-side {
-    width: 154px;
+html, body {
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* MAIN-MENU */
-.main-menu {
-    display: inline-block;
-    background: url("../img/bg-menu.png");
-    width: 144px;
-    height: 40px;
-    cursor: pointer;
-    vertical-align: middle;
-    /*padding-top: 5px;*/
-    text-align: center;
-    font-family: sans-serif;
+.menu_wrapper {
+    clear: both;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.clearfix:after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+.menu {
+    /* position: relative;
+    overflow: hidden; */
+    background-image: url("../img/bg-menu.png")
+}
+
+.menu li{
+    list-style: none;
+    float: left;
+    padding: 5px;
+    margin: 5px 5px 5px 15px;
+}
+
+.menu a {
     color: white;
     text-decoration: none;
 }
 
-.logo {
-    margin: 30px;
+.left {
+    width: 25%;
+    background-image: url("../img/left-border.png");
+    background-repeat: repeat-y;
+    background-color: #f9f9f9;
+    background-position: right;
+    float: left;
+    height: 100%;
+}
+
+.right {
+    width: 25%;
+    background-image: url("../img/right-border.png");
+    background-repeat: repeat-y;
+    background-color: #f9f9f9;
+    background-position: left;
+    float: right;
+    height: 100%;
 }
 
 /* CONTENT */
-.content {
-    /*width: 300px;*/
-    margin: 0 auto;
-    background-color: white;
-    text-align: center;
+.logo {
+    float: left;
+    margin: 30px;
 }
 
-/* HEADER */
+.container {
+    float: left;
+    width: 50%;
+}
 
+.content {
+    font-size: 14px;
+}
 
-/* LEFT-MENU */
+/* SIDEBAR */
+.sidebar_wrapper {
+    float: left;
+}
 
+.sidebar li {
+    list-style: none;
+    border: 1px solid #c8c8c8;
+    padding: 10px;
+}
+
+.sidebar a {
+    color: #767575;
+    text-decoration: none;
+}
 
 /* FOOTER */
+.footer {
+    clear: both;
+    background-color: #e1e1e1;
+}
+
+.footer li{
+    float: left;
+    list-style: none;
+    padding: 5px;
+    margin: 5px 5px 5px 15px;
+}
+
+.footer a {
+    color: black;
+    text-decoration: none;
+}
+
+.copyright {
+    float: right;
+}
