@@ -35,7 +35,7 @@ html, body {
 }
 
 .left {
-    width: 25%;
+    width: 15%;
     background-image: url("../img/left-border.png");
     background-repeat: repeat-y;
     background-color: #f9f9f9;
@@ -45,7 +45,7 @@ html, body {
 }
 
 .right {
-    width: 25%;
+    width: 15%;
     background-image: url("../img/right-border.png");
     background-repeat: repeat-y;
     background-color: #f9f9f9;
@@ -62,11 +62,17 @@ html, body {
 
 .container {
     float: left;
-    width: 50%;
+    width: 70%;
 }
 
 .content {
     font-size: 14px;
+}
+
+.image {
+    float: right;
+    border: 1px solid #c8c8c8;
+    padding: 30px 10px;
 }
 
 /* SIDEBAR */
