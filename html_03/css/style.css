@@ -7,7 +7,7 @@ html, body {
 .menu_wrapper {
     clear: both;
     width: 100%;
-    margin: 0 auto;
+    /* margin: 0 auto; */
 }
 
 .clearfix:after {
@@ -17,22 +17,31 @@ html, body {
 }
 
 .menu {
-    /* position: relative;
-    overflow: hidden; */
     background-image: url("../img/bg-menu.png")
 }
 
 .menu li{
     list-style: none;
     float: left;
-    padding: 5px;
-    margin: 5px 5px 5px 15px;
+    padding: 10px 15px;
 }
 
 .menu a {
     color: white;
     text-decoration: none;
 }
+
+/* test begin */
+.menu li.active{
+    background-image: url("../img/active-top-menu-bg.jpg");
+}
+
+/* test end */
+
+/* .menu a.active {
+    background-color: #464646;
+    padding: 10px 15px;
+} */
 
 .left {
     width: 15%;
@@ -57,7 +66,7 @@ html, body {
 /* CONTENT */
 .logo {
     float: left;
-    margin: 30px;
+    margin-bottom: 30px;
 }
 
 .container {
@@ -95,6 +104,11 @@ html, body {
     text-decoration: none;
 }
 
+.sidebar li.active {
+    background-color: #f9f9f9;
+
+}
+
 .sidebar a.active {
     color: black;
     padding-left: 30px;
@@ -109,8 +123,11 @@ html, body {
 .footer li{
     float: left;
     list-style: none;
-    padding: 5px;
-    margin: 5px 5px 5px 15px;
+    padding: 10px 15px;
+}
+
+.footer li.active{
+    text-decoration: underline;
 }
 
 .footer a {
