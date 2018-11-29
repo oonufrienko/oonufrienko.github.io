@@ -139,6 +139,4 @@ html, body {
 
 .copyright {
     float: right;
-    display: table-cell;
-    vertical-align: middle;
 }
