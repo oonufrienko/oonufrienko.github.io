@@ -77,8 +77,9 @@ html, body {
 }
 
 .content {
-    float: right;
     width: 50%;
+    height: 800px;
+    float: right;
 }
 
 .image {
