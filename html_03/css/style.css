@@ -36,22 +36,26 @@ html, body {
 
 .left {
     width: 15%;
+    height: 100%;
+
+    float: left;
+
     background-image: url("../img/left-border.png");
     background-repeat: repeat-y;
     background-color: #f9f9f9;
     background-position: right;
-    float: left;
-    height: 100%;
 }
 
 .right {
     width: 15%;
+    height: 100%;
+
+    float: right;
+
     background-image: url("../img/right-border.png");
     background-repeat: repeat-y;
     background-color: #f9f9f9;
     background-position: left;
-    float: right;
-    height: 100%;
 }
 
 /* CONTENT */
@@ -61,36 +65,41 @@ html, body {
 }
 
 .container {
-    float: left;
     margin-top: 40px;
     height: 100%;
+
+    float: left;
 }
 
 .logo {
-    float: left;
     margin-bottom: 30px;
+
+    float: left;
 }
 
 .content_wrapper {
+    margin: 30px 0;
     font-size: 14px;
-    margin: 30px 0; 
 }
 
 .content {
     width: 50%;
     height: 800px;
+
     float: right;
 }
 
 .image {
-    float: right;
-    border: 1px solid #c8c8c8;
     padding: 30px 10px;
+    border: 1px solid #c8c8c8;
+
+    float: right;
 }
 
 .description {
-    float: right;
     margin: 30px 0 30px 30px;
+
+    float: right;
 }
 
 /* SIDEBAR */
@@ -99,10 +108,11 @@ html, body {
 }
 
 .sidebar li {
-    list-style: none;
-    border: 1px solid #c8c8c8;
-    padding: 10px;
     width: 150px;
+    padding: 10px;
+    border: 1px solid #c8c8c8;
+
+    list-style: none;
 }
 
 .sidebar a {
@@ -115,26 +125,30 @@ html, body {
  }
 
 .sidebar a:hover {
-    color: black;
     padding-left: 30px;
+    
+    color: black;
 }
 
 .sidebar a.active {
+    padding-left: 30px;
 
     background-color: #f9f9f9;
-    padding-left: 30px;
 }
 
 /* FOOTER */
 .footer {
-    clear: both;
     background-color: #e1e1e1;
+
+    clear: both;
 }
 
 .footer li {
-    float: left;
-    list-style: none;
     padding: 10px 15px;
+
+    float: left;
+
+    list-style: none;
 }
 
 .footer li:hover {
