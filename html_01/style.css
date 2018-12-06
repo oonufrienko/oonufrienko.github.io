@@ -1,55 +1,71 @@
-.main {
-	background: #eee;
+.main
+{
+    background: #eee;
 }
 
-.title {
-	font-family: Helvetica, sans-serif;
-	font-weight: bold;
-	font-size: 24px;
-    text-align: center;	
+.title
+{
+    font-family: Helvetica, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+
     padding: 20px;
+
+    text-align: center;
 }
 
-.main-image {
-	text-align: center;
+.main-image
+{
+    text-align: center;
 }
 
-.main-font {
-	width: 600px;
-	padding: 24px 0 24px 0;
-	font-family: Helvetica, sans-serif;
-	font-weight: normal;
-	font-size: 14px;
-	border-bottom: 1px solid #a9a9a9;
-	text-align: left;
-	margin: auto;
+.main-font
+{
+    font-family: Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+
+    width: 600px;
+    margin: auto;
+    padding: 24px 0 24px 0;
+
+    text-align: left;
+
+    border-bottom: 1px solid #a9a9a9;
 }
 
-.article {
-	width: 600px;
-	padding: 24px 0 24px 0;
-	font-family: Helvetica, sans-serif;
-	font-weight: normal;
-	font-size: 14px;
-	text-align: left;
-	margin: auto;
+.article
+{
+    font-family: Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+
+    width: 600px;
+    margin: auto;
+    padding: 24px 0 24px 0;
+
+    text-align: left;
 }
 
-.subtitle {
-	padding: 20px 0 0 0;
-	width: 600px;
-	font-family: Helvetica, sans-serif;
-	font-weight: bold;
-	font-size: 15px;
-	text-align: left;
-	margin: auto;
+.subtitle
+{
+    font-family: Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
 
+    width: 600px;
+    margin: auto;
+    padding: 20px 0 0 0;
+
+    text-align: left;
 }
 
-.inner-text {
-	text-indent: 20px;
+.inner-text
+{
+    text-indent: 20px;
 }
 
-.list {
-	margin: 0 0 0 40px;
+.list
+{
+    margin: 0 0 0 40px;
 }
