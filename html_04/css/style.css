@@ -53,23 +53,62 @@ html {
 .header {
     height: 175px;
 
+    padding-right: 20px;
+
     background-color: white;
 
-    color: #108faf;
+    position: relative;
 
-    /* position: relative; */
+    color: #108faf;
 }
 
 .logo {
-    height: 100%;
+    width: 290px;
     margin-left: 20px;
 
-    position: relative;
+    position: absolute;
+    bottom: 0;
 }
 
 .logo img {
+    display: block;
+}
+
+/* Contacts */
+.contacts {
+    float: right;
+}
+
+.contacts ul li {
+    margin: 5px;
+    list-style: none;
+    display: block;
+}
+
+/* Menu countries */
+.menu-countries {
+    float: right;
+
     position: absolute;
     bottom: 0;
+    right: 0;
+}
+
+ul li { 
+    margin: 8px;
+    display: inline-block;
+
+    font-size: 11px;
+
+    list-style: none;
+}
+
+.menu-countries li a{
+    color: #108faf;
+}
+
+li a p {
+    text-align: center;
 }
 
 /* Footer */
