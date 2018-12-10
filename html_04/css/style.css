@@ -130,6 +130,7 @@ ul {
     display: block;
     margin: 0;
     padding: 0;
+
     list-style: none;
 }
 
@@ -157,14 +158,16 @@ ul.menu > li > a {
 
 ul.submenu {
     display: none;
+    width: 147px;
+    
     position: absolute;
-    width: 120px;
     top: 37px;
     left: 0;
 }
 
 ul.submenu > li {
     display: block;
+    margin: 0;
 }
 
 ul.submenu > li > a {
@@ -175,7 +178,7 @@ ul.submenu > li > a {
     color: white;
     text-decoration: none;
 
-    background-image: url("../img/bg-menu.jpg");
+    background-color: #303030;
 }
 
 ul.submenu > li > a:hover {
