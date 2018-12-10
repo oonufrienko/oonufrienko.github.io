@@ -1,7 +1,6 @@
 body, 
 html {
     height: 100%;
-    /* width: 100%; */
     min-width: 1000px;
 
     background-color: #108faf;
@@ -9,12 +8,6 @@ html {
     font-family: Tahoma, Geneva, Verdana, sans-serif;
     font-size: 14px;
 }
-
-.clearfix:after {
-    content: '';
-    clear: both;
-    display: block;
-} /* Not used ?! */
 
 /* Layout */
  .global-wrapper { 
@@ -58,7 +51,6 @@ html {
     background-repeat: repeat-x;
 
 }
-
 
 .content {
     min-height: 97%;
@@ -127,6 +119,71 @@ ul li {
 
 li a p {
     text-align: center;
+}
+
+/* Menu */
+div.menu {
+    background-image: url("../img/bg-menu.jpg");
+}
+
+ul {
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+ul:after {
+    display: block;
+    content: ' ';
+    clear: both;
+    float: none;
+}
+
+ul.menu > li {
+    float: left;
+    position: relative;
+}
+
+ul.menu > li > a {
+    display: block;
+    padding: 10px;
+
+    font-size: 14px;
+    color: white;
+
+    text-decoration: none;
+}
+
+ul.submenu {
+    display: none;
+    position: absolute;
+    width: 120px;
+    top: 37px;
+    left: 0;
+}
+
+ul.submenu > li {
+    display: block;
+}
+
+ul.submenu > li > a {
+    display: block;
+    padding: 10px;
+
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+
+    background-image: url("../img/bg-menu.jpg");
+}
+
+ul.submenu > li > a:hover {
+    text-decoration: underline;
+}
+
+ul.menu > li:hover > ul.submenu {
+    display: block;
 }
 
 /* Footer */
