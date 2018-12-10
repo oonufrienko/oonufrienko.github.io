@@ -52,7 +52,7 @@ html {
 
 }
 
-.content {
+.content-wrapper {
     min-height: 97%;
 
     box-shadow: 0px 0px 12px 3px rgba(3,29,40,1);
@@ -121,9 +121,17 @@ li a p {
     text-align: center;
 }
 
+.image-above-menu {
+    height: 237px;
+}
+
 /* Menu */
 div.menu {
     background-image: url("../img/bg-menu.jpg");
+
+    border-bottom: 1px solid black;
+
+    /* box-shadow: 0px 14px 15px -12px rgba(0,0,0,0.75); */
 }
 
 ul {
@@ -132,6 +140,8 @@ ul {
     padding: 0;
 
     list-style: none;
+
+    /* box-shadow: 0px 14px 15px -12px rgba(0,0,0,0.75); */
 }
 
 ul:after {
@@ -156,9 +166,14 @@ ul.menu > li > a {
     text-decoration: none;
 }
 
+ul.menu > li > a > img {
+    vertical-align: middle;
+}
+
+
 ul.submenu {
     display: none;
-    width: 147px;
+    width: 130px;
     
     position: absolute;
     top: 37px;
@@ -187,6 +202,13 @@ ul.submenu > li > a:hover {
 
 ul.menu > li:hover > ul.submenu {
     display: block;
+}
+
+/* Content */
+.content {
+    min-height: 100%;
+    background-color: #fff;
+    box-shadow: inset 0px 14px 15px -7px rgba(0,0,0,0.75);
 }
 
 /* Footer */
