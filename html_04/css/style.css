@@ -55,14 +55,10 @@ h3 {
 
     background-image: url("../img/bg-left-right-column.jpg");
     background-repeat: repeat-x;
-
 }
 
 .content-wrapper {
-    /* min-height: 97%; */
-
-    box-shadow: 0px 0px 12px 3px rgba(3,29,40,1);
-    /* border-bottom: 1px solid black; */
+    box-shadow: 0px 0px 12px 3px rgba(3,29,40,1);   
 }
 
 /* Header */
@@ -209,6 +205,8 @@ ul.menu > li:hover > ul.submenu {
 /* Content */
 .content {
     width: 1000px;
+    min-height: 100%;
+    position: relative;
 
     background-color: #fff;
   
@@ -251,10 +249,10 @@ ul.menu > li:hover > ul.submenu {
 .footer {
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: -40px;
 
     width: 100%;
-    margin-bottom: 10px;
+    height: 30px;
 
     text-align: center;
     color: beige;
