@@ -11,4 +11,8 @@ function mathPow(num, pow) {
 var num = +prompt("Введите число, которое будем возводить в степень:", "");
 var pow = +prompt("Введите степень, в которую будем возводить число "+num, "");
 
-console.log(mathPow(num, pow));
+if (( num !== 0 ) && ( pow !== 0 )) {
+        console.log(mathPow(num, pow));
+} else {
+    console.log("Sorry, you haven't entered anything. Try againg after refresh the page");
+}
