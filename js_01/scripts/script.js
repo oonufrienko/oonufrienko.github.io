@@ -1,18 +1,18 @@
 function mathPow(num, pow) {
-    var result = 1;
+  var result = 1;
 
-    for (var i = 1; i <= pow; i++ ) {
-        result *= num; 
-    }
+  for (var i = 1; i <= pow; i++) {
+      result *= num; 
+  }
 
-    return result;
+  return result;
 }
 
 var num = +prompt("Введите число, которое будем возводить в степень:", "");
-var pow = +prompt("Введите степень, в которую будем возводить число "+num, "");
+var pow = +prompt("Введите степень, в которую будем возводить число " + num, "");
 
-if (( num !== 0 ) && ( pow !== 0 )) {
-        console.log(mathPow(num, pow));
+if ((num !== 0) && (pow !== 0)) {
+  console.log( mathPow(num, pow) );
 } else {
-    console.log("Sorry, you haven't entered anything. Try againg after refresh the page");
+  console.log("Sorry, you haven't entered anything. Try againg after refresh the page");
 }
