@@ -1,7 +1,5 @@
 var pageObj = {
 
-    customCheck: 1,
-
     createContainer: function() {
         
         var div = document.createElement('div');
@@ -32,7 +30,7 @@ var pageObj = {
 
     },
 
-    createQuestionsSection: function() {
+    addQuestionsSection: function() {
 
         this.contentWrapper();
 
@@ -70,16 +68,67 @@ var pageObj = {
 
     },
     
-    createAnswerList: function() {
-    // NOT FINISHED YET
+    createAnswersList: function() {
+
         this.createAnswersSection();
         
-        var answerList = document.getElementById("answers");
-        // answerList - that's array of ul elements
+        var answerList = document.querySelectorAll('#answers');
 
+        for ( var i = 0; i < answerList.length; i++ ) {
+            for ( var j = 0; j < 3; j++ ) {
+                var li = document.createElement('li');
+                answerList[i].appendChild(li);
+            }
+        }
 
-    // -------------------
+    },
 
+    createCheckboxWrapper: function() {
+
+        this.createAnswersList();
+
+        var ul = document.querySelectorAll('#answers');
+
+        for ( var i = 0; i < ul.length; i++ ) {
+            
+            var li = ul[i].getElementsByTagName('li');
+
+            for ( var j = 0; j < li.length; j++ ) {
+                var div = document.createElement('div');
+                div.classList.add('custom-control','custom-checkbox');
+                li[j].appendChild(div);    
+            }
+        }
+
+    },
+
+    addAnswerCheckboxes: function() {
+
+        this.createCheckboxWrapper();
+
+        var checkboxWrapper = document.getElementsByClassName('custom-checkbox');
+        var checkboxNumber = 1;
+
+        for ( var i = 0; i < checkboxWrapper.length; i++ ) {
+            var input = document.createElement('input');
+                input.type = 'checkbox';
+                input.classList.add('custom-control-input');
+                input.id = 'customCheck' + (i + 1);
+
+            var label = document.createElement('label');
+                label.classList.add('custom-control-label');
+                label.htmlFor = 'customCheck' + (i + 1);
+                
+                    if (checkboxNumber > 3) {
+                        checkboxNumber = 1;
+                    }
+
+                label.innerHTML = 'Вариант ответа №' + checkboxNumber;
+                checkboxNumber++;
+
+            checkboxWrapper[i].appendChild(input);
+            checkboxWrapper[i].appendChild(label);
+        }
 
     },
 
@@ -112,6 +161,6 @@ var pageObj = {
 }
 
 pageObj.addTitle();
-pageObj.createQuestionsSection();
-pageObj.createAnswersSection();
+pageObj.addQuestionsSection();
+pageObj.addAnswerCheckboxes();
 pageObj.addButton();
