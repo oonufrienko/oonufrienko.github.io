@@ -6,11 +6,12 @@ for (var i = 0; i < 5; i ++) {
 
 var userName = prompt("Введите имя пользователя", "");
 
-var isNameMatch = 0;
+var isNameMatch = false;
 
 for (var j = 0; j < arr.length; j++) {
     if (arr[j] === userName) {
-        isNameMatch++;
+        isNameMatch = true;
+        break;
     }
 }
 

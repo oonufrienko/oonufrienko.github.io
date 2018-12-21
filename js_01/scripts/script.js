@@ -14,5 +14,5 @@ var pow = +prompt("Введите степень, в которую будем �
 if ((num !== 0) && (pow !== 0)) {
   console.log( mathPow(num, pow) );
 } else {
-  console.log("Sorry, you haven't entered anything. Try againg after refresh the page");
+  console.log("Вы ничего не ввели. Попробуйте снова, после перезагрузки страницы");
 }
