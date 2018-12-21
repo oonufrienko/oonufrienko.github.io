@@ -152,6 +152,7 @@ ul:after {
 ul.menu > li {
     float: left;
     position: relative;
+    z-index: 10;
 }
 
 ul.menu > li > a {
