@@ -1,164 +1,111 @@
+var domElements = {
+    div: 'div',
+    h3: 'h3',
+    ol: 'ol',
+    ul: 'ul',
+    li: 'li',
+    input: 'input',
+    label: 'label',
+    button: 'button'       
+};
+
 var pageObj = {
 
-    createContainer: function() {
+    insertNewDomElement: function(whereToInsert, tagName, cssClass) {
+        // You can send more than 3 arguments during call insertNewDomElement() function
+        // 4-th argument is Object and means that the dom element has additional params 
         
-        var div = document.createElement('div');
-        div.classList.add('container');
-        document.body.appendChild(div);
-        
+        var parentArray = document.querySelectorAll(whereToInsert);
+
+
+        for ( var i = 0; i < parentArray.length; i++ ) {
+            var child = document.createElement(tagName);
+
+            if (cssClass !== '') {
+                child.classList.add(...cssClass);
+            }
+
+            if (arguments.length > 3) {
+                for ( var key in arguments[3] ) {
+                    child[key] = arguments[3][key];
+                }
+            }
+
+            if (tagName === 'input') {
+                child.id = 'customCheck' + (i + 1);
+            } else if (tagName === 'label') {
+                child.htmlFor = 'customCheck' + (i + 1);
+                child.innerHTML = 'Вариант ответа №' + i;
+            }
+
+            parentArray[i].appendChild(child);
+        }
+
     },
 
     addTitle: function() {
 
-        this.createContainer();
+        this.insertNewDomElement( 'body', domElements.div, ['container'] );
 
-        var container = document.querySelector('.container');
+        var propsH3 = {
+            innerHTML: "Тест по программированию"
+        };
 
-        var title = document.createElement('h3');
-        title.innerHTML = "Тест по программированию";
-        container.appendChild(title);
-
-    },
-
-    contentWrapper: function() {
-
-        var container = document.querySelector('.container');
-
-        var div = document.createElement('div');
-        div.classList.add('content');
-        container.appendChild(div); 
+        this.insertNewDomElement( '.container', domElements.h3, ['title'], propsH3 );
 
     },
 
     addQuestionsSection: function() {
 
-        this.contentWrapper();
+        this.insertNewDomElement( '.container', domElements.div, ['content'] );
 
-        var content = document.querySelector('.content');
+        this.insertNewDomElement( '.content', domElements.ol, ['questions'] );
 
-        var questionsSection = document.createElement('ol');
-        questionsSection.id = 'questions';
-        content.appendChild(questionsSection);
-
-        this.createQuestionItems();
-
-    },
-
-    createQuestionItems: function() {
-
-        var questionsSection = document.getElementById('questions');
+        var propsLi = {};
 
         for ( var i = 1; i <= 3; i++ ) {
-            var questionItem = document.createElement('li');
-            questionItem.innerHTML = "Вопрос №" + i;
-            questionsSection.appendChild(questionItem);
-        }
-
-    },
-
-    createAnswersSection: function() {
-
-        var questionsList = document.getElementById("questions").getElementsByTagName("li");
-
-        for ( var i = 0; i < questionsList.length; i++ ) {
-            var answerSection = document.createElement('ul');
-            answerSection.id = 'answers';
-            questionsList[i].appendChild(answerSection);
-        }
-
-    },
-    
-    createAnswersList: function() {
-
-        this.createAnswersSection();
-        
-        var answerList = document.querySelectorAll('#answers');
-
-        for ( var i = 0; i < answerList.length; i++ ) {
-            for ( var j = 0; j < 3; j++ ) {
-                var li = document.createElement('li');
-                answerList[i].appendChild(li);
-            }
-        }
-
-    },
-
-    createCheckboxWrapper: function() {
-
-        this.createAnswersList();
-
-        var ul = document.querySelectorAll('#answers');
-
-        for ( var i = 0; i < ul.length; i++ ) {
-            
-            var li = ul[i].getElementsByTagName('li');
-
-            for ( var j = 0; j < li.length; j++ ) {
-                var div = document.createElement('div');
-                div.classList.add('custom-control','custom-checkbox');
-                li[j].appendChild(div);    
-            }
+            propsLi.innerHTML = "Вопрос №" + i;
+            this.insertNewDomElement( '.questions', domElements.li, '', propsLi );
         }
 
     },
 
     addAnswerCheckboxes: function() {
 
-        this.createCheckboxWrapper();
-
-        var checkboxWrapper = document.getElementsByClassName('custom-checkbox');
-        var checkboxNumber = 1;
-
-        for ( var i = 0; i < checkboxWrapper.length; i++ ) {
-            var input = document.createElement('input');
-                input.type = 'checkbox';
-                input.classList.add('custom-control-input');
-                input.id = 'customCheck' + (i + 1);
-
-            var label = document.createElement('label');
-                label.classList.add('custom-control-label');
-                label.htmlFor = 'customCheck' + (i + 1);
-                
-                    if (checkboxNumber > 3) {
-                        checkboxNumber = 1;
-                    }
-
-                label.innerHTML = 'Вариант ответа №' + checkboxNumber;
-                checkboxNumber++;
-
-            checkboxWrapper[i].appendChild(input);
-            checkboxWrapper[i].appendChild(label);
+        this.insertNewDomElement( '.questions li', domElements.ul, ['answers'] );
+        
+        for ( var j = 0; j < 3; j++ ) {
+            this.insertNewDomElement( '.answers', domElements.li, '' );
         }
 
-    },
+        var cssClassArray = ['custom-control', 'custom-checkbox'];
+        this.insertNewDomElement( '.answers li', domElements.div, cssClassArray );       
 
-    createButtonWrapper: function() {
+        var inputProps = {
+            type: 'checkbox'
+        };
 
-        var content = document.querySelector('.content');
+        this.insertNewDomElement( '.custom-checkbox', domElements.input, ['custom-control-input'], inputProps );
 
-        var div = document.createElement('div');
-        div.classList.add('submit-btn');
-
-        content.appendChild(div);
+        this.insertNewDomElement( '.custom-checkbox', domElements.label, ['custom-control-label'] );
 
     },
 
     addButton: function() {
 
-        this.createButtonWrapper();
+        this.insertNewDomElement( '.content', domElements.div, ['submit-btn'] );
 
-        var submitBtn = document.querySelector('.submit-btn');
+        var cssClassArray = ['btn', 'btn-secondary', 'btn-lg'];
+        var buttonObj = {
+                type: "button",
+                innerHTML: "Проверить мои результаты"
+        };
 
-        var btn = document.createElement('button');
-        btn.classList.add('btn', 'btn-secondary', 'btn-lg');
-        btn.type = "button";
-        btn.innerHTML = "Проверить мои результаты";
-
-        submitBtn.appendChild(btn);
+        this.insertNewDomElement( '.submit-btn', domElements.button, cssClassArray, buttonObj );
 
     }
 
-}
+};
 
 pageObj.addTitle();
 pageObj.addQuestionsSection();
