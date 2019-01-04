@@ -1,23 +1,28 @@
-.container {
-    text-align: center;
-    margin-top: 100px;
-    width: 800px;
-}
-
-ul.timer {
+.timer {
+    margin: 50px auto 20px;
+    font-size: 81px;
+    font-weight: 500;
     border: 3px solid gray;
     border-radius: 25px;
     padding: 0;
+    width: 800px;
 }
 
-.timer li {
-    display: inline-block;
-    list-style: none;
-    font-size: 81px;
-    font-weight: 500;
+.hhmmss {
+    /* display: block; */
+    margin: 0 27%;
 }
 
-.colon {
-    margin-bottom: 10px;
-    vertical-align: middle;
+.miliseconds {
+    display: block;
+    position: relative;
+    left: 520px;
+    margin-top: -20px;
+    font-size: 18px;
+    font-weight: 200;
+
+}
+
+.buttons {
+    text-align: center; 
 }
