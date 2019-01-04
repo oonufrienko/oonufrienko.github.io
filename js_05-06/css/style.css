@@ -1,0 +1,23 @@
+.container {
+    text-align: center;
+    margin-top: 100px;
+    width: 800px;
+}
+
+ul.timer {
+    border: 3px solid gray;
+    border-radius: 25px;
+    padding: 0;
+}
+
+.timer li {
+    display: inline-block;
+    list-style: none;
+    font-size: 81px;
+    font-weight: 500;
+}
+
+.colon {
+    margin-bottom: 10px;
+    vertical-align: middle;
+}
