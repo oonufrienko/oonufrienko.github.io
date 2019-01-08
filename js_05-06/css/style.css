@@ -26,3 +26,9 @@
 .buttons {
     text-align: center; 
 }
+
+
+ul.issues {
+    margin: 100px auto;
+    list-style: none;
+}

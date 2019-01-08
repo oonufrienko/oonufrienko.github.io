@@ -30,7 +30,7 @@ function runTimer() {
 var timerId = undefined;
     
 button[0].addEventListener('click', function() {
-        if(!!timerId) {
+        if(timerId) {
             clearInterval(timerId);
             timerId = undefined;
             button[0].innerHTML = "Continue";
