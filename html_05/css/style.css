@@ -1,0 +1,102 @@
+/* Font */
+@font-face {
+    font-family: 'PT Root Light';
+    src: url('../fonts/pt_root_ui_light-webfont.eot');
+    src: url('../fonts/pt_root_ui_light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/pt_root_ui_light-webfont.woff2') format('woff2'),
+         url('../fonts/pt_root_ui_light-webfont.woff') format('woff'),
+         url('../fonts/pt_root_ui_light-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* GENERAL. Set up background. Font. */
+.login-page-bg {
+    background: url('../img/bg.jpg') no-repeat;
+    background-size: 100%;
+    /* width: 100%; */
+    font-family: 'PT Root Light', Tahoma, sans-serif;
+    
+}
+
+.clearfix:after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+/* MENU */
+.top-menu {
+    height: 36px;
+    width: 100%;
+    background-color: #085595;
+
+}
+
+.menu {
+    float: right;
+}
+
+.menu a {
+    text-decoration: none;
+    /* font-weight: 100; */
+}
+
+/* .service-menu {
+    float: right;
+    color: white;
+} */
+
+ul.menu > li {
+    display: inline-block;
+    margin-right: 15px;
+    /* color: #60b5ed; */
+    /* font-weight: 100; */
+}
+
+ul.menu > li > a {
+    color: #60b5ed;
+}
+
+/* vertical line in top-menu #56a2dc */
+
+.flag-image {
+    /* display: inline-block; */
+    margin-top: 1px;
+    padding: 0 5px;
+    border-left: 1px solid #56a2dc;
+}
+
+/* Login form */
+.login-form-wrapper {
+    width: 560px;
+    height: 613px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+}
+
+.login-form-header {
+    height: 62px;
+    margin-bottom: 2px;
+
+    font-size: 22px;
+    color: white;
+    text-align: center;
+    line-height: 62px; /* <- inner text vertical align */
+
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.login-form {
+    height: 549px;
+
+    color: white;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
