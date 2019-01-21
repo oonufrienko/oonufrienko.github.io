@@ -10,14 +10,13 @@
     font-style: normal;
 }
 
-
-/* GENERAL. Set up background. Font. */
+/* GENERAL. Set up background, font. */
 .login-page-bg {
     background: url('../img/bg.jpg') no-repeat;
-    background-size: 100%;
-    /* width: 100%; */
+    /* background-size: 100%; */
+    background-position: top;
+
     font-family: 'PT Root Light', Tahoma, sans-serif;
-    
 }
 
 .clearfix:after {
@@ -30,8 +29,10 @@
 .top-menu {
     height: 36px;
     width: 100%;
+    min-width: 800px;
     background-color: #085595;
-
+    position: absolute;
+    z-index: 100;
 }
 
 .menu {
@@ -59,8 +60,6 @@ ul.menu > li > a {
     color: #60b5ed;
 }
 
-/* vertical line in top-menu #56a2dc */
-
 .flag-image {
     /* display: inline-block; */
     margin-top: 1px;
@@ -68,10 +67,12 @@ ul.menu > li > a {
     border-left: 1px solid #56a2dc;
 }
 
-/* Login form */
+/* LOGIN FORM */
 .login-form-wrapper {
     width: 560px;
+    /* min-width: 560px; */
     height: 613px;
+    /* min-height: 613px; */
 
     position: absolute;
     top: 50%;
@@ -91,6 +92,7 @@ ul.menu > li > a {
     line-height: 62px; /* <- inner text vertical align */
 
     background-color: rgba(0, 0, 0, 0.5);
+
 }
 
 .login-form {
@@ -104,6 +106,7 @@ ul.menu > li > a {
 .fb-button {
     padding: 36px 0 20px;
  }
+
  /* разделительная линия OU между хедером и формой. НАЧАЛО */
 
 .divide-line {
