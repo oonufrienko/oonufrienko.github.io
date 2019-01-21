@@ -13,7 +13,7 @@
 /* GENERAL. Set up background, font. */
 .login-page-bg {
     background: url('../img/bg.jpg') no-repeat;
-    /* background-size: 100%; */
+    background-size: 100%;
     background-position: top;
 
     font-family: 'PT Root Light', Tahoma, sans-serif;
@@ -70,16 +70,13 @@ ul.menu > li > a {
 /* LOGIN FORM */
 .login-form-wrapper {
     width: 560px;
-    /* min-width: 560px; */
     height: 613px;
-    /* min-height: 613px; */
 
     position: absolute;
     top: 50%;
     left: 50%;
 
     transform: translate(-50%, -50%);
-
 }
 
 .login-form-header {
@@ -92,7 +89,6 @@ ul.menu > li > a {
     line-height: 62px; /* <- inner text vertical align */
 
     background-color: rgba(0, 0, 0, 0.5);
-
 }
 
 .login-form {
@@ -107,7 +103,7 @@ ul.menu > li > a {
     padding: 36px 0 20px;
  }
 
- /* разделительная линия OU между хедером и формой. НАЧАЛО */
+ /* 'OU' SEPARATE LINE */
 
 .divide-line {
      width: 277px;
@@ -122,64 +118,6 @@ ul.menu > li > a {
     border-top: 1px solid grey;
     box-shadow: 0px 1px 0px 0px rgba(0,0,0,0.75);
 }
-    
-/* .word-separator {
-    display: inline-block;
-    color: #999999;
-} */
-    
-/* .right-separator {
-    display: inline-block;
-    width: 40%;
-    margin-bottom: 5px;
-    border-top: 1px solid grey;
-    box-shadow: 0px 1px 0px 0px rgba(0,0,0,0.75);
- } */
-
-
-
- /* .divide-line p {
-     width: 277px;
-     margin: 10px auto;
- 
-     color: #999999;
- 
-     border-bottom: 1px solid grey;
-     box-shadow: 0px 1px 0px 0px rgba(0,0,0,0.75);
-     
-     line-height: 0.1em;
- } */
-/* 
- .divide-line p span{
-     display: block;
-
-     margin: 0 auto;
-     width: 31px; */
-     /* position: absolute; */
-     /* background-image: url('../img/1pixel.png'); */
-     /* z-index: 1000; */
-     
-     /* background-color: #7cbfec; */
-     /* padding: 0 5px;
- } */
- 
-
- /* .divide-line:before {
-     width: 90%;
-     content: '';
-     border: 1px solid green;
- }
- 
- .divide-line:after {
-     width: 90%;
-     content: '';
-     background-image: url('../img/flag.png');
- 
-     border: 1px solid white;
- 
- } */
-
-/* разделительная линия OU между хедером и формой. КОНЕЦ */
 
 .form-fields 
 input[type="text"], 
@@ -223,17 +161,14 @@ input[type="password"]:focus {
     margin: 15px auto;
 
     font-size: 12px;
-    color: #b0afac;
-}
-
-.send-checkbox input[type="checkbox"]{
-    margin: 10px 0;
-    width: 20px;
+    color: #bebcb5;
 }
 
 .send-checkbox {
-    font-size: 12px;
-    color: #b0afac;
+    width: 297px;
+    margin: 10px auto;
+    text-align: left;
+    color: #bebcb5;
 }
 
 button[type="submit"] {
