@@ -13,7 +13,7 @@
 /* GENERAL SECTION. Set up background, font, clearfix. */
 .login-page-bg {
     background: url('../img/bg.jpg') no-repeat;
-    background-size: cover;
+    /* background-size: cover; */
     background-position: top;
 
     font-family: 'PT Root Light', Tahoma, sans-serif;
