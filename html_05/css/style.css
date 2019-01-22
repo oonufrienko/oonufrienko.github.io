@@ -1,4 +1,4 @@
-/* Font */
+/* FONT */
 @font-face {
     font-family: 'PT Root Light';
     src: url('../fonts/pt_root_ui_light-webfont.eot');
@@ -10,10 +10,10 @@
     font-style: normal;
 }
 
-/* GENERAL. Set up background, font. */
+/* GENERAL SECTION. Set up background, font, clearfix. */
 .login-page-bg {
     background: url('../img/bg.jpg') no-repeat;
-    background-size: 100%;
+    background-size: cover;
     background-position: top;
 
     font-family: 'PT Root Light', Tahoma, sans-serif;
@@ -30,9 +30,11 @@
     height: 36px;
     width: 100%;
     min-width: 800px;
-    background-color: #085595;
+    
     position: absolute;
     z-index: 100;
+
+    background-color: #085595;
 }
 
 .menu {
@@ -40,31 +42,66 @@
 }
 
 .menu a {
+    display: block;
+
+    height: 100%;
+    padding: 0 20px;
+
     text-decoration: none;
-    /* font-weight: 100; */
-}
 
-/* .service-menu {
-    float: right;
-    color: white;
-} */
-
-ul.menu > li {
-    display: inline-block;
-    margin-right: 15px;
-    /* color: #60b5ed; */
-    /* font-weight: 100; */
-}
-
-ul.menu > li > a {
     color: #60b5ed;
 }
 
-.flag-image {
-    /* display: inline-block; */
-    margin-top: 1px;
-    padding: 0 5px;
+ul.menu > li {
+    display: inline-block;
+    margin: 0 -5px 0 0;
+    height: 36px;
+
+    line-height: 36px;
+}
+
+ul.menu > li > a:hover {
+    color: white;
+    background-color: #60b5ed;
+    cursor: pointer;
+}
+
+/* SERVICE MENU. Oferta button, etc */
+.service-menu {
+    float: right;
+    color: white;
+}
+
+.service-menu a {
+    text-decoration: none;
+    color: white;
+}
+
+ul.service-menu > li {
+    display: inline-block;
+    margin: -1px 10px 0 0;
+    padding: 0 10px;
+    height: 36px;
+
+    list-style: none;
+
+    line-height: 36px;
+}
+
+.service-menu .login a {
+    text-decoration: underline;
+}
+
+.service-menu li.login {
+    background: linear-gradient(to bottom, #4faedb, #2e7ac4);
+}
+
+img.flag-image {
+    display: inline-block;
+    padding: 0 10px;
     border-left: 1px solid #56a2dc;
+
+    transform: translateY(30%);
 }
 
 /* LOGIN FORM */
@@ -156,14 +193,6 @@ input[type="password"]:focus {
     box-shadow: 1px 1px 28px 6px rgba(80,139,181,0.89);
 }
 
-.form-fields p {
-    width: 276px;
-    margin: 15px auto;
-
-    font-size: 12px;
-    color: #bebcb5;
-}
-
 .send-checkbox {
     width: 297px;
     margin: 10px auto;
@@ -186,4 +215,12 @@ button[type="submit"] {
     background: linear-gradient(to bottom, #7cbfec, #2e7ac4);
 
     cursor: pointer;
+}
+
+.form-fields p {
+    width: 276px;
+    margin: 15px auto;
+
+    font-size: 12px;
+    color: #bebcb5;
 }
