@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>HTML 05-01. Tables. Composition with red, blue and yellow</title>
+</head>
+<style>
+  table {
+    border-collapse: collapse;
+    width: 500px;
+    border: 10px solid white;
+  }
+
+  th,
+  tr,
+  td {
+    border: 9px solid black;
+  }
+</style>
+
+<body>
+  <table align="center">
+    <tbody>
+      <tr>
+        <td style="width: 20%; height: 47px;" colspan="2"></td>
+        <td colspan="2"></td>
+        <td style="width: 40%; background-color: #ffe958;" colspan="2"></td> <!-- yellow -->
+      </tr>
+      <tr>
+        <td style="height: 130px;"></td>
+        <td style="background-color: #ff5f42;" colspan="3" rowspan="2"></td>  <!-- red -->
+        <td style="background-color: #ffe958;" colspan="2"></td> <!-- yellow -->
+      </tr>
+      <tr>
+        <td style="height: 130px;" rowspan="2"></td>
+        <!-- <td></td> -->
+      </tr>
+      <tr>
+        <td style="height: 40px; background-color: #000;" colspan="2"></td> <!-- black -->
+        <td></td>
+        <td colspan="2"></td>
+      </tr>
+      <tr>
+        <td style="background-color: #ffe958;" rowspan="3"></td> <!-- yellow -->
+        <td style="height: 40px; background-color: #000;" colspan="2"></td>  <!-- black -->
+        <td></td>
+        <td style="background-color: #0c4e95;" colspan="2" rowspan="2"></td> <!-- blue -->
+      </tr>
+      <tr>
+        <td colspan="2" rowspan="2"></td>
+        <td style="height: 30px; background-color: #000;"></td>
+      </tr>
+      <tr>
+        <td style="height: 40px"></td>
+        <td colspan="2"></td>
+        <!-- <td></td> -->
+      </tr>
+    </tbody>
+  </table>
+</body>
+
+</html>
