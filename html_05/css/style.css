@@ -105,6 +105,33 @@ img.flag-image {
 }
 
 /* LOGIN FORM */
+.fb-button {
+    width: 276px;
+    height: 34px;
+    margin: 0 auto 20px;
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+    line-height: 34px;
+
+    background-image: url('../img/fb-btn.png');
+    background-repeat: no-repeat;
+
+}
+
+.fb-button a {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    text-decoration: none;
+    color: white;
+}
+
+.fb-button a span {
+    margin-left: 20px;
+}
+
 .login-form-wrapper {
     width: 560px;
     height: 613px;
@@ -129,6 +156,7 @@ img.flag-image {
 }
 
 .login-form {
+    padding-top: 36px; 
     height: 549px;
 
     color: white;
@@ -136,15 +164,11 @@ img.flag-image {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-.fb-button {
-    padding: 36px 0 20px;
- }
-
  /* 'OU' SEPARATE LINE */
 
 .divide-line {
      width: 277px;
-     margin: 0 auto;
+     margin: 0 auto 10px;
      color: #999999;
 }
 
