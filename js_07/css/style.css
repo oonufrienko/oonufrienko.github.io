@@ -43,7 +43,6 @@
 
 
 li.active {
-    padding: 5px 10px;
     background-color: bisque;
     font-weight: 700;
     -webkit-box-shadow: 2px -1px 5px 0px rgba(0,0,0,0.75);
@@ -56,4 +55,20 @@ li.active {
     border: 1px solid grey;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
+}
+
+.content-zebra {
+    display: none;
+}
+
+.content-elephant {
+    display: none;
+}
+
+.content-rhino {
+    display: none;
+}
+
+.active {
+    display: block;
 }
