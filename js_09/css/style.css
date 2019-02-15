@@ -9,6 +9,7 @@ body {
     background-color: bisque;
 }
 
+/* Carousel */
 .jcarousel-wrapper {
     margin: 100px;
     position: relative;
@@ -110,4 +111,10 @@ have a fixed width and height (but it's not required).
     color: #fff;
     opacity: .7;
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.75);
+}
+
+/* SELECT control */
+.select-wrapper {
+    margin: 100px;
+    position: relative;
 }

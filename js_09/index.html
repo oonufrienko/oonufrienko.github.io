@@ -3,12 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>JS 09</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="./js/jquery.jcarousel.min.js"></script>
-    <script src="./js/script.js"></script>
+
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" href="./css/selectize.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    <script src="./js/jquery.jcarousel.min.js"></script>
+    <script src="./js/jc-script.js"></script>
+
+    <script src="./js/selectize.min.js"></script>
+    <script src="./js/selectize-script.js"></script>
+
 </head>
 <body>  
     <div class="jcarousel-wrapper">
@@ -30,5 +38,22 @@
         </div>
 
     </div>
+    <div class="select-wrapper">
+	    <form action="#">
+            <label>Choose your option :</label>
+            <select name="options" >
+                <option value="" selected>Please choose</option>
+                <option value="opt1">Big Option test line with more wordssss</option>
+                <option value="opt2">Option 2</option>
+                <option value="opt3">Option 3</option>
+                <option value="opt4">Option 4</option>
+                <option value="opt5">Option 5</option>
+                <option value="opt6">Option 6</option>
+                <option value="opt7">Option 7</option>
+                <option value="opt8">Option 8</option>
+            </select>            
+        </form>
+    </div>
+    
 </body>
 </html>
