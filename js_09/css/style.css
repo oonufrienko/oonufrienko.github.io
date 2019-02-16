@@ -114,4 +114,34 @@ have a fixed width and height (but it's not required).
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.75);
 }
 
+.checkboxes-wrapper {
+    width: 200px;
+    padding: 20px;
+    border: 1px solid #999;
+    border-radius: 10px;
 
+}
+
+.checkboxes-wrapper p {
+    font-weight: 700;
+}
+
+span.niceCheck {
+    display: block;
+    margin-bottom: 10px;
+    padding-left: 17px;
+    line-height: 18px;
+}
+
+.niceCheck {
+    width: 17px;
+    height: 17px;
+    display: inline-block;
+    cursor: pointer;
+    background: url('../img/checkbox-sprite.png');
+}
+
+.niceCheck input {
+    display: none;
+}
+            
