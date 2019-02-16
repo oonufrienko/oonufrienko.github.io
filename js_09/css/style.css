@@ -129,7 +129,7 @@ have a fixed width and height (but it's not required).
 span.niceCheck {
     display: block;
     margin-bottom: 10px;
-    padding-left: 17px;
+    padding-left: 20px;
     line-height: 18px;
 }
 
@@ -138,7 +138,7 @@ span.niceCheck {
     height: 17px;
     display: inline-block;
     cursor: pointer;
-    background: url('../img/checkbox-sprite.png');
+    background: url('../img/checkbox-sprite.png') no-repeat;
 }
 
 .niceCheck input {
