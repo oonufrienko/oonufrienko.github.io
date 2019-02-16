@@ -10,7 +10,9 @@ body {
 }
 
 /* Carousel */
-.jcarousel-wrapper {
+.jcarousel-wrapper,
+.select-wrapper, 
+.checkboxes-wrapper {
     margin: 100px;
     position: relative;
 }
@@ -105,7 +107,6 @@ have a fixed width and height (but it's not required).
     opacity: .75;
 }
 
-
 .jcarousel-pagination a.active {
     background: #4E443C;
     color: #fff;
@@ -113,8 +114,4 @@ have a fixed width and height (but it's not required).
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.75);
 }
 
-/* SELECT control */
-.select-wrapper {
-    margin: 100px;
-    position: relative;
-}
+
