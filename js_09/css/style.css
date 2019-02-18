@@ -11,8 +11,7 @@ body {
 
 /* Carousel */
 .jcarousel-wrapper,
-.select-wrapper, 
-.checkboxes-wrapper {
+.select-wrapper {
     margin: 100px;
     position: relative;
 }
@@ -114,12 +113,22 @@ have a fixed width and height (but it's not required).
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.75);
 }
 
-.checkboxes-wrapper {
+
+/* CHECKBOXES CONTROL */
+
+.checkboxes-wrapper,
+.checkboxes-wrapper2 {
+    margin-left: 100px;
+}
+
+.checkboxes-wrapper,
+.checkboxes-wrapper2 {
     width: 200px;
     padding: 20px;
     border: 1px solid #999;
     border-radius: 10px;
-
+    background-color: aliceblue;
+    float: left;
 }
 
 .checkboxes-wrapper p {
@@ -127,10 +136,9 @@ have a fixed width and height (but it's not required).
 }
 
 span.niceCheck {
-    display: block;
-    margin-bottom: 10px;
-    padding-left: 20px;
-    line-height: 18px;
+    margin-left: 4px;
+    margin-bottom: -3px;
+    overflow: hidden;
 }
 
 .niceCheck {
@@ -141,7 +149,15 @@ span.niceCheck {
     background: url('../img/checkbox-sprite.png') no-repeat;
 }
 
-.niceCheck input {
-    display: none;
+.niceChecked {
+	background-position: 0 -17px;
 }
-            
+
+.niceCheck input {
+    /* display: none; */
+    margin-left: -100px; /* можно задать побольше чтобы наверняка скрыть поле */
+}
+
+.niceCheckDisabled {
+	background-image: url('../img/checkbox-disabled.png');
+}
