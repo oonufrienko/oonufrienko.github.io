@@ -117,12 +117,12 @@ have a fixed width and height (but it's not required).
 /* CHECKBOXES CONTROL */
 
 .checkboxes-wrapper,
-.checkboxes-wrapper2 {
+.css-checkbox-wrapper {
     margin-left: 100px;
 }
 
 .checkboxes-wrapper,
-.checkboxes-wrapper2 {
+.css-checkbox-wrapper {
     width: 200px;
     padding: 20px;
     border: 1px solid #999;
@@ -131,7 +131,8 @@ have a fixed width and height (but it's not required).
     float: left;
 }
 
-.checkboxes-wrapper p {
+.checkboxes-wrapper p,
+.css-checkbox-wrapper p {
     font-weight: 700;
 }
 
@@ -154,10 +155,42 @@ span.niceCheck {
 }
 
 .niceCheck input {
-    /* display: none; */
     margin-left: -100px; /* можно задать побольше чтобы наверняка скрыть поле */
 }
 
 .niceCheckDisabled {
 	background-image: url('../img/checkbox-disabled.png');
+}
+
+/* CSS checkboxes */
+.css-checkbox-wrapper input[type=checkbox] {
+	position: absolute;
+	clip: rect(0, 0, 0, 0);
+}
+
+.css-checkbox-wrapper label {
+	cursor: pointer;
+}
+
+.css-checkbox-wrapper label:after {
+	content: " ";
+	display: inline-block;
+	width: 17px;
+	height: 17px;
+	background: url('../img/css-checkbox.png');
+	position: relative;
+	top: 3px;
+    margin-left: 10px;
+}
+
+.css-checkbox-wrapper input[type=checkbox]:checked + label:after {
+background-position: 0 -17px;
+}
+
+.css-checkbox-wrapper label:hover:after {
+background-position: 0 -34px;
+}
+
+.css-checkbox-wrapper input[type=checkbox]:checked + label:hover:after {
+background-position: 0 -51px;
 }

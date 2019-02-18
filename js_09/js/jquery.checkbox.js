@@ -1,10 +1,10 @@
-jQuery(document).ready(function(){
+$(function() {
 
-    jQuery(".niceCheck").each(
+    $(".niceCheck").each(
     /* при загрузке страницы меняем обычные на стильные checkbox */
     function() {
          
-        changeCheckStart(jQuery(this));
+        changeCheckStart($(this));
          
     });
     
@@ -89,66 +89,10 @@ function changeCheckStart(el)
         }
         
         /* цепляем обработчики стилизированным checkbox */		
-        el.next().bind("mousedown", function(e) { changeCheck(jQuery(this)) });
-        el.next().find("input").eq(0).bind("change", function(e) { changeVisualCheck(jQuery(this)) });
+        el.next().bind("mousedown", function(e) { changeCheck($(this)) });
+        el.next().find("input").eq(0).bind("change", function(e) { changeVisualCheck($(this)) });
 
         el.remove();
     
     return true;
 }
-
-
-// $(function() {
-
-//     $(".niceCheck").mousedown(
-//     /* при клике на чекбоксе меняем его вид и значение */
-//     function() {
-    
-//          changeCheck($(this));
-         
-//     });
-    
-    
-//     $(".niceCheck").each(
-//     /* при загрузке страницы нужно проверить какое значение имеет чекбокс и в соответствии с ним выставить вид */
-//     function() {
-         
-//          changeCheckStart($(this));
-         
-//     });
-    
-// });
-    
-// function changeCheck(el)
-// /* 
-//     функция смены вида и значения чекбокса
-//     el - span контейнер для обычного чекбокса
-//     input - чекбокс
-// */
-// {
-//         var el = el,
-//             input = el.find("input").eq(0);
-//             // debugger;
-//         if(!input.attr("checked")) {
-//             el.css("background-position","0 -17px");	
-//             input.attr("checked", true)
-//     } else {
-//             el.css("background-position","0 0");	
-//             input.attr("checked", false)
-//     }
-//         return true;
-// }
-
-// function changeCheckStart(el)
-// /* 
-//     если установлен атрибут checked, меняем вид чекбокса
-// */
-// {
-//         var el = el, 
-//         input = el.find("input").eq(0);
-
-//         if(input.attr("checked")) {
-//             el.css("background-position","0 -17px");	
-//         }
-//         return true;
-// }
