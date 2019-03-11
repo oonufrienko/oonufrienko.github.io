@@ -1,103 +1,47 @@
-.menu-wrapper {
-    margin: 100px;
-}
-
-ul.menu {
-    display: inline-block;
-    background-color: #2e5786;
-    /* padding: 5px 20px; */
-    height: 40px;
-    line-height: 40px;
+ul.menu{
+	background-color: #e5eecc;
+  	border: solid 1px #c3c3c3;
+	cursor: pointer;
+    
+    width: 430px;
+    position: relative;
 }
 
 ul.menu > li {
-    display: inline-block;
-    /* margin-right: 20px; */
-    padding: 0 20px;
-
-    list-style: none;
+	margin-left: 10px;
+    padding: 5px 10px;
+	list-style: none;
+	display: inline-block;
+    cursor: pointer;
+    /* border: 1px solid red; */
 }
 
-ul.menu li a {
-    color: #dbdbdb;
-    text-decoration: none;
-    display: block;
-}
-
-ul.menu li a:hover,
-ul.menu li a:hover:after {
-    color: #f9f9f9;
-}
-
-li.has-submenu {
-    position: relative;
-    border: 0;
-}
-
-li.has-submenu a::after {
-    display: inline-block;
-    margin-left: 3px;
-    color: #dbdbdb;
-    font-size: 12px;
-    content: "\2913";
-}
-
-/* onhover state for the menu item */
-li.has-submenu a.changed::after { 
-    display: inline-block;
-    margin-left: 3px;
-    color: #dbdbdb;
-    font-size: 12px;
-    content: "\2912";
-}
-/* li.has-submenu .changed {
-    color: #dbdbdb;
-} */
-
-/* HTML code of arrow down<span>&#10515;</span> */
-
- /* html example arrow UP */
-/* <span>&#10514;</span> */
-
- /* css example UP arrow */
-/* span {
-  content: "\2912";
-} */
-
-ul.submenu {
-    width: 110px;
-    padding: 0 10px 0;
+.has-sub ul {
+	display: none;
+    cursor: pointer;
+    
     position: absolute;
-    left: 15px;
-    top: 40px;
-
-    background-color: #2e5786;
-
-    font-size: 12px;
-
-    list-style: none;
+    top: 28px;
+    left: 85px;
 }
 
-ul.submenu > li {
-    display: none;
-    height: 40px;
-    line-height: 40px;
-    border-bottom: 1px solid grey;
+.has-sub ul li {
+    background-color: #e5eecc;
+	list-style: none;
+    padding: 10px 15px;
+    border-bottom: 1px solid green;
+
 }
 
-/*  ?? Do I really need this ??? */
-ul.submenu > li > a {
-    display: block;
-    height: 40px;
-    line-height: 40px;
-    /* border-bottom: 1px solid grey; */
-}
+ul.sub-menu-level2 li {
+    /* display: none; */
+    background-color: #cfd8b7;
+    width: 100px;
+    /* border: 1px solid blue; */
+} 
 
-/*  ?? Do I really need this ??? */
-.active {
-    display: block;
-}
-
-.sub-submenu {
-    display: none;
+.has-sub ul.sub-menu-level2 {
+    /* display: none; */
+    position: absolute;
+    left: 118px; 
 }
