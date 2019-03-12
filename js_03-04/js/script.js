@@ -36,18 +36,18 @@ var pageObj = {
     addTitle: function() {
 
         var objDiv = {
-            parent: "body",
-            childTag: "div",
-            childClass: ["container"]
+            parent: 'body',
+            childTag: 'div',
+            childClass: ['container']
         };
 
         this.insertNewDomElement( objDiv );
 
         var objTitle = {
-            parent: ".container",
-            childTag: "h3",
-            childClass: ["title"],
-            innerHTML: "Тест по программированию"            
+            parent: '.container',
+            childTag: 'h3',
+            childClass: ['title'],
+            innerHTML: 'Тест по программированию'            
         };
 
         this.insertNewDomElement( objTitle );
@@ -57,30 +57,30 @@ var pageObj = {
     addQuestionsSection: function() {
 
         var objDiv = {
-            parent: ".container",
-            childTag: "div",
+            parent: '.container',
+            childTag: 'div',
             childClass: ['content']
         };
 
         this.insertNewDomElement( objDiv );
 
         var objOl = {
-            parent: ".content",
-            childTag: "ol",
+            parent: '.content',
+            childTag: 'ol',
             childClass: ['questions']
         };
 
         this.insertNewDomElement( objOl );
 
         var objLi = {
-            parent: ".questions",
-            childTag: "li",
-            childClass: "",
-            innerHTML: ""
+            parent: '.questions',
+            childTag: 'li',
+            childClass: '',
+            innerHTML: ''
         };
 
         for ( var i = 1; i <= 3; i++ ) {
-            objLi.innerHTML = "Вопрос №" + i;
+            objLi.innerHTML = 'Вопрос №' + i;
             this.insertNewDomElement( objLi );
         }
 
@@ -89,17 +89,17 @@ var pageObj = {
     addAnswerCheckboxes: function() {
 
         var objUl = {
-            parent: ".questions li",
-            childTag: "ul",
+            parent: '.questions li',
+            childTag: 'ul',
             childClass: ['answers']
         };
 
         this.insertNewDomElement( objUl );
         
         var objLi = {
-            parent: ".answers",
-            childTag: "li",
-            childClass: ""
+            parent: '.answers',
+            childTag: 'li',
+            childClass: ''
         };
         
         for ( var j = 0; j < 3; j++ ) {
@@ -107,16 +107,16 @@ var pageObj = {
         }
 
         var objDiv = {
-            parent: ".answers li",
-            childTag: "div",
+            parent: '.answers li',
+            childTag: 'div',
             childClass: ['custom-control', 'custom-checkbox']
         };
 
         this.insertNewDomElement( objDiv );       
 
         var objInput = {
-            parent: ".custom-checkbox",
-            childTag: "input",
+            parent: '.custom-checkbox',
+            childTag: 'input',
             childClass: ['custom-control-input'],         
             type: 'checkbox'
         };
@@ -124,8 +124,8 @@ var pageObj = {
         this.insertNewDomElement( objInput );
 
         var objLabel = {
-            parent: ".custom-checkbox",
-            childTag: "label",
+            parent: '.custom-checkbox',
+            childTag: 'label',
             childClass: ['custom-control-label']
         };
 
@@ -136,19 +136,19 @@ var pageObj = {
     addButton: function() {
 
         var objDiv = {
-            parent: ".content",
-            childTag: "div",
+            parent: '.content',
+            childTag: 'div',
             childClass: ['submit-btn']
         };
 
         this.insertNewDomElement( objDiv );
 
         var objButton = {
-            parent: ".submit-btn",
-            childTag: "button",
+            parent: '.submit-btn',
+            childTag: 'button',
             childClass: ['btn', 'btn-secondary', 'btn-lg'],
-            type: "button",
-            innerHTML: "Проверить мои результаты" 
+            type: 'button',
+            innerHTML: 'Проверить мои результаты' 
         };
 
         this.insertNewDomElement( objButton );
