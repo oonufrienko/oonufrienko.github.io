@@ -69,9 +69,7 @@ var pageObj = {
 
         var objLi = {
           parent: '.questions',
-          childTag: 'li',
-          childClass: '',
-          innerHTML: ''
+          childTag: 'li'
         };
 
         for (var i = 1; i <= 3; i++) {
@@ -92,8 +90,7 @@ var pageObj = {
         
         var objLi = {
           parent: '.answers',
-          childTag: 'li',
-          childClass: ''
+          childTag: 'li'
         };
         
         for (var j = 0; j < 3; j++) {
