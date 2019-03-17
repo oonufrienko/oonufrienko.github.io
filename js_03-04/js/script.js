@@ -10,14 +10,12 @@ var pageObj = {
             child.classList.add(...insertedObj.childClass);
           }
 
-          if (Object.keys(insertedObj).length > 3) {
-            var j = 3;
+          if (insertedObj.innerHTML) {
+            child.innerHTML = insertedObj.innerHTML;
+          }
 
-            while (j < Object.keys(insertedObj).length) {
-              var key = Object.keys(insertedObj)[j];
-              child[key] = insertedObj[key];
-              j++;
-            }
+          if (insertedObj.type) {
+            child.type = insertedObj.type;
           }
 
           if (insertedObj.childTag === 'input') {
