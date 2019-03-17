@@ -1,6 +1,8 @@
 var pageObj = {
 
     insertNewDomElement: function(insertedObj) {
+
+
         var parentArray = document.querySelectorAll(insertedObj.parent);
 
         for (var i = 0; i < parentArray.length; i++) {
@@ -12,10 +14,10 @@ var pageObj = {
 
           if (Object.keys(insertedObj).length > 3) {
             var j = 3;
-
+         
             while (j < Object.keys(insertedObj).length) {
-              var key = Object.keys(insertedObj)[j];
-              child[key] = insertedObj[key];
+              var arr = Object.entries(insertedObj)[j];
+              child[arr[0]] = arr[1];
               j++;
             }
           }
