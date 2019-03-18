@@ -1,107 +1,147 @@
-var domElements = {
-    div: 'div',
-    h3: 'h3',
-    ol: 'ol',
-    ul: 'ul',
-    li: 'li',
-    input: 'input',
-    label: 'label',
-    button: 'button'       
-};
-
 var pageObj = {
 
-    insertNewDomElement: function(whereToInsert, tagName, cssClass) {
-        // You can send more than 3 arguments during call insertNewDomElement() function
-        // 4-th argument is Object and means that the dom element has additional params 
+    insertNewDomElement: function(insertedObj) {
+        var parentArray = document.querySelectorAll(insertedObj.parent);
+
+        for (var i = 0; i < parentArray.length; i++) {
+          var child = document.createElement(insertedObj.childTag);
+
+          if (insertedObj.childClass) {
+            child.classList.add(...insertedObj.childClass);
+          }
+
+          if (insertedObj.innerHTML) {
+            child.innerHTML = insertedObj.innerHTML;
+          }
+
+          if (insertedObj.type) {
+            child.type = insertedObj.type;
+          }
+
+          if (insertedObj.childTag === 'input') {
+            child.id = 'customCheck' + (i + 1);
+          } else if (insertedObj.childTag === 'label') {
+              child.htmlFor = 'customCheck' + (i + 1);
+              child.innerHTML = 'Вариант ответа №' + i;
+            }
+
+        parentArray[i].appendChild(child);
         
-        var parentArray = document.querySelectorAll(whereToInsert);
-
-
-        for ( var i = 0; i < parentArray.length; i++ ) {
-            var child = document.createElement(tagName);
-
-            if (cssClass !== '') {
-                child.classList.add(...cssClass);
-            }
-
-            if (arguments.length > 3) {
-                for ( var key in arguments[3] ) {
-                    child[key] = arguments[3][key];
-                }
-            }
-
-            if (tagName === 'input') {
-                child.id = 'customCheck' + (i + 1);
-            } else if (tagName === 'label') {
-                child.htmlFor = 'customCheck' + (i + 1);
-                child.innerHTML = 'Вариант ответа №' + i;
-            }
-
-            parentArray[i].appendChild(child);
         }
-
     },
 
     addTitle: function() {
-
-        this.insertNewDomElement( 'body', domElements.div, ['container'] );
-
-        var propsH3 = {
-            innerHTML: "Тест по программированию"
+        var objDiv = {
+          parent: 'body',
+          childTag: 'div',
+          childClass: ['container']
         };
 
-        this.insertNewDomElement( '.container', domElements.h3, ['title'], propsH3 );
+        this.insertNewDomElement(objDiv);
+
+        var objTitle = {
+          parent: '.container',
+          childTag: 'h3',
+          childClass: ['title'],
+          innerHTML: 'Тест по программированию'            
+        };
+
+        this.insertNewDomElement(objTitle);
 
     },
 
     addQuestionsSection: function() {
+        var objDiv = {
+          parent: '.container',
+          childTag: 'div',
+          childClass: ['content']
+        };
 
-        this.insertNewDomElement( '.container', domElements.div, ['content'] );
+        this.insertNewDomElement(objDiv);
 
-        this.insertNewDomElement( '.content', domElements.ol, ['questions'] );
+        var objOl = {
+          parent: '.content',
+          childTag: 'ol',
+          childClass: ['questions']
+        };
 
-        var propsLi = {};
+        this.insertNewDomElement(objOl);
 
-        for ( var i = 1; i <= 3; i++ ) {
-            propsLi.innerHTML = "Вопрос №" + i;
-            this.insertNewDomElement( '.questions', domElements.li, '', propsLi );
+        var objLi = {
+          parent: '.questions',
+          childTag: 'li'
+        };
+
+        for (var i = 1; i <= 3; i++) {
+          objLi.innerHTML = 'Вопрос №' + i;
+          this.insertNewDomElement(objLi);
         }
 
     },
 
     addAnswerCheckboxes: function() {
-
-        this.insertNewDomElement( '.questions li', domElements.ul, ['answers'] );
-        
-        for ( var j = 0; j < 3; j++ ) {
-            this.insertNewDomElement( '.answers', domElements.li, '' );
-        }
-
-        var cssClassArray = ['custom-control', 'custom-checkbox'];
-        this.insertNewDomElement( '.answers li', domElements.div, cssClassArray );       
-
-        var inputProps = {
-            type: 'checkbox'
+        var objUl = {
+          parent: '.questions li',
+          childTag: 'ul',
+          childClass: ['answers']
         };
 
-        this.insertNewDomElement( '.custom-checkbox', domElements.input, ['custom-control-input'], inputProps );
+        this.insertNewDomElement(objUl);
+        
+        var objLi = {
+          parent: '.answers',
+          childTag: 'li'
+        };
+        
+        for (var j = 0; j < 3; j++) {
+          this.insertNewDomElement(objLi);
+        }
 
-        this.insertNewDomElement( '.custom-checkbox', domElements.label, ['custom-control-label'] );
+        var objDiv = {
+          parent: '.answers li',
+          childTag: 'div',
+          childClass: ['custom-control', 'custom-checkbox']
+        };
+
+        this.insertNewDomElement(objDiv);       
+
+        var objInput = {
+          parent: '.custom-checkbox',
+          childTag: 'input',
+          childClass: ['custom-control-input'],         
+          type: 'checkbox'
+        };
+
+        this.insertNewDomElement(objInput);
+
+        var objLabel = {
+          parent: '.custom-checkbox',
+          childTag: 'label',
+          childClass: ['custom-control-label']
+        };
+
+        this.insertNewDomElement(objLabel);
 
     },
 
     addButton: function() {
-
-        this.insertNewDomElement( '.content', domElements.div, ['submit-btn'] );
-
-        var cssClassArray = ['btn', 'btn-secondary', 'btn-lg'];
-        var buttonObj = {
-                type: "button",
-                innerHTML: "Проверить мои результаты"
+        var objDiv = {
+          parent: '.content',
+          childTag: 'div',
+          childClass: ['submit-btn']
         };
 
-        this.insertNewDomElement( '.submit-btn', domElements.button, cssClassArray, buttonObj );
+        this.insertNewDomElement(objDiv);
+
+        var objButton = {
+          parent: '.submit-btn',
+          childTag: 'button',
+          childClass: ['btn', 'btn-secondary', 'btn-lg'],
+          type: 'button',
+          innerHTML: 'Проверить мои результаты' 
+        };
+
+        this.insertNewDomElement(objButton);
 
     }
 
