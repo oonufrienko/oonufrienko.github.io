@@ -49,7 +49,7 @@ li.active {
     box-shadow: 2px -1px 5px 0px rgba(0,0,0,0.75);
 }
 
-.content {
+.content-container {
     background-color: white;
     padding: 10px 20px;
     border: 1px solid grey;
@@ -57,15 +57,7 @@ li.active {
     border-bottom-right-radius: 5px;
 }
 
-.content-zebra {
-    display: none;
-}
-
-.content-elephant {
-    display: none;
-}
-
-.content-rhino {
+.content {
     display: none;
 }
 

@@ -1,24 +1,21 @@
 $(function() {
 
     var $tabs = $('.tabs ul li');
-    $('.tabs ul li:first').addClass('active');
-
+    var $tabContent = $('div.content');
+    $tabs.eq(0).addClass('active');
+    $tabContent.eq(0).addClass('active');
+  
     $tabs.on('click', function(e){
-        var $tabItem = $('.active');
-        $tabItem.removeClass( "active" );
-
-        var $tabName = $(this).text();
-
-        if ( $tabName === "Zebras") {
-            $('div.content-zebra').addClass('active');
-        } else if ( $tabName === "Elephant") {
-            $('div.content-elephant').addClass('active');
-        } else {
-            $('div.content-rhino').addClass('active');
-        }
-
-        $(this).addClass('active');
-
-    });
-
-});
+      $tabs.removeClass('active');
+      $tabContent.removeClass('active');
+  
+      var activeNumber = $tabs.index($(this));
+  
+      $tabs.eq(activeNumber).addClass('active');
+      $tabContent.eq(activeNumber).addClass('active');
+         
+  
+      });
+  
+  });
+  
