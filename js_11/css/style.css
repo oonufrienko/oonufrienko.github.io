@@ -1,0 +1,20 @@
+.fancybox-modal {
+    position: absolute;
+    width: 1030px;
+    height: 682px;
+    padding-top: 8px;
+    top: 50%;
+    left: 50%;
+    margin: -341px 0 0 -515px;
+    text-align: center;
+    background: #eee;
+}
+
+.fancybox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(117, 117, 119, 0.5);
+}
