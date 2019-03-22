@@ -1,0 +1,23 @@
+h3 {
+    margin: 20px 0;
+
+    text-align: center;
+
+}
+
+.submit-btn {
+    margin-top: 40px;
+
+    text-align: center;
+
+}
+
+ol > li {
+    margin: 20px;
+}
+
+ul li {
+    margin-top: 10px;
+
+    list-style: none;
+}

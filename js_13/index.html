@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>localStorage and JS Template</title>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./js/setdata.js"></script>
+    <script src="./js/script.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+<body>
+    <div class="container">
+      <h3 class="title">Тест по программированию</h3>
+      <div class="content">
+
+      </div>
+    </div>
+
+    <script type="text/template" id="content-template">
+        <ol class="questions">
+        <% var n = 1; %>
+        <% for(var i=1; i <= 3; i++) { %>
+            <li>
+                <%=sectionQA.question + i %>
+                <ul>
+                  <% sectionQA.answers.forEach(function(answer) { %>
+                    <li>
+                      <div class="custom-control custom-checkbox">
+                        <input class="custom-control-input" type="checkbox" id=<%="customCheck" + n%> >
+                        <label class="custom-control-label" for=<%="customCheck" + n%> >
+                          <%=answer%>                          
+                          <% n++; %>
+                        </label>
+                      </div>
+                    </li>
+                  <% }) %>
+                </ul>
+            </li>
+        <% } %>    
+        </ol>
+        <div class="submit-btn">
+          <button class="btn btn-secondary btn-lg" type="button">
+                Проверить мои результаты
+          </button>
+        </div>
+    </script>
+
+  
+</body>
+</html>
