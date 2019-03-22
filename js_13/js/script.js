@@ -1,3 +1,5 @@
+'use strict'
+
 $(function(){
 
   if (localStorage.getItem('sectionQA')) {
