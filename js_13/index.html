@@ -22,11 +22,11 @@
     <script type="text/template" id="content-template">
         <ol class="questions">
         <% var n = 1; %>
-        <% for(var i=1; i <= 3; i++) { %>
+        <% for(var i=1; i <= sectionQA.answers.length; i++) { %>
             <li>
                 <%=sectionQA.question + i %>
-                <ul>
-                  <% sectionQA.answers.forEach(function(answer) { %>
+                <ul class="answers">
+                  <% sectionQA.answers.forEach( function(answer) { %>
                     <li>
                       <div class="custom-control custom-checkbox">
                         <input class="custom-control-input" type="checkbox" id=<%="customCheck" + n%> >
@@ -48,6 +48,9 @@
         </div>
     </script>
 
+    <script type="text/template" id="answers">
+        
+    </script>
   
 </body>
 </html>
