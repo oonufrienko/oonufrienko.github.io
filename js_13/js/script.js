@@ -6,54 +6,69 @@ $(function(){
 
     var sectionQA = localStorage.getItem('sectionQA');
 
-    var html = $("#content-template").html();
+    var html = $('#content-template').html();
 
     var tmpl = _.template(html);
-
     var content = tmpl(sectionQA);
-
+    
     $('.content').append(content);
-
+    
     $('.btn').on('click', function(){
-      debugger;
-      // read the correct answers from the localStorage
-        var correctAnswers = JSON.parse(localStorage.getItem('correctAnswers'));
-        var n = 3;
-        var sectionNumber = -1;
-        var correctAnswer = -1;
-        var result = {
-          0: undefined,
-          1: undefined,
-          2: undefined
-        };
+      var correctAnswers = JSON.parse(localStorage.getItem('correctAnswers'));
+      var n = 3;
+      var sectionNumber = -1;
+      var correctAnswer = -1;
+      var results = {
+        id: [ 'вы не отметили', 'вы не отметили', 'вы не отметили' ]
+      };
 
-        $( '.answers li input' ).each(function( index ) {
-          if ($(this).prop('checked')) {
-            debugger;
-            console.log( 'index =', index );
-            sectionNumber = parseInt(index / n);
-            correctAnswer = index - (sectionNumber * n);
-            if (correctAnswers.answerId[sectionNumber] === correctAnswer) {
-              result[sectionNumber] = true;
-            } else {
-              result[sectionNumber] = false;
-            }
+      $( '.answers li input' ).each(function( index ) {
+        if ($(this).prop('checked')) {
+          sectionNumber = parseInt(index / n);
+          correctAnswer = index - (sectionNumber * n);
+          if (correctAnswers.answerId[sectionNumber] === correctAnswer) {
+            results.id[sectionNumber] = 'верно';
+          } else {
+            results.id[sectionNumber] = 'не верно';
           }
-        });
+        }
+      });
 
-        showModal(result);
+      showModal(results);
+
+      $('.result-modal .btn-close').on('click', function () {
+        hideModal();
+      });
 
     });
 
 
-    function showModal() {
-      
+    function showModal(result_obj) {
+
+      $('.content').after('<div class="overlay"></div>');
+
+      var htmlAnswerTemplate = $('#answers').html();
+
+      var tmplFunction = _.template(htmlAnswerTemplate);
+
+      var resultModalHTML = tmplFunction(result_obj);
+
+      $('.result-modal').append(resultModalHTML);
+
+      $('.result-modal').show();
+
+      // htmlAnswerTemplate = null;
+      // tmplFunction = null;
+      // resultModalHTML = null;
+
+    }
+
+    function hideModal() {
+      $('div').remove('.overlay');
+      $('.result-modal').hide();
     }
 
 }
-
-
-
 
 
 // localStorage.clear();
