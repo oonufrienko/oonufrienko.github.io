@@ -46,6 +46,7 @@ $(function(){
     function showModal(result_obj) {
 
       $('.content').after('<div class="overlay"></div>');
+      $('.overlay').after('<div class="result-modal"></div>');
 
       var htmlAnswerTemplate = $('#answers').html();
 
@@ -57,19 +58,14 @@ $(function(){
 
       $('.result-modal').show();
 
-      // htmlAnswerTemplate = null;
-      // tmplFunction = null;
-      // resultModalHTML = null;
-
     }
 
     function hideModal() {
       $('div').remove('.overlay');
-      $('.result-modal').hide();
+      $('div').remove('.result-modal');
     }
 
 }
-
 
 // localStorage.clear();
 
