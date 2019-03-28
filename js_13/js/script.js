@@ -63,6 +63,11 @@ $(function(){
     function hideModal() {
       $('div').remove('.overlay');
       $('div').remove('.result-modal');
+      $( '.answers li input' ).each(function( index ) {
+        if ($(this).prop('checked')) {
+          $(this).prop('checked', false);
+        }
+      });
     }
 
 }
