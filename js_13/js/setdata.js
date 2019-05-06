@@ -1,13 +1,69 @@
 'use strict'
 
-var sectionQA = {
-  question: "Вопрос ",
-  answers: ["Вариант ответа №1", "Вариант ответа №2", "Вариант ответа №3"]
-};
+var questions = [
+  {
+    questionTitle: 'Вопрос 1',
+    questionId: 1,
+    answers: [
+      {
+        title: 'Ответ 1',
+        id: 11,
+        isCorrect: false
+      },
+      {
+        title: 'Ответ 2',
+        id: 12,
+        isCorrect: true
+      },
+      {
+        title: 'Ответ 3',
+        id: 13,
+        isCorrect: false
+      }
+    ]
+  },
+  {
+    questionTitle: 'Вопрос 2',
+    questionId: 2,
+    answers: [
+      {
+        title: 'Ответ 1',
+        id: 21,
+        isCorrect: false
+      },
+      {
+        title: 'Ответ 2',
+        id: 22,
+        isCorrect: true
+      },
+      {
+        title: 'Ответ 3',
+        id: 23,
+        isCorrect: false
+      }
+    ]
+  },
+  {
+    questionTitle: 'Вопрос 3',
+    questionId: 3,
+    answers: [
+      {
+        title: 'Ответ 1',
+        id: 31,
+        isCorrect: false
+      },
+      {
+        title: 'Ответ 2',
+        id: 32,
+        isCorrect: false
+      },
+      {
+        title: 'Ответ 3',
+        id: 33,
+        isCorrect: true
+      }
+    ]
+  }
+]
 
-var correctAnswers = {
-  answerId: [1, 0, 2]
-};
-
-localStorage.setItem('sectionQA', JSON.stringify(sectionQA));
-localStorage.setItem('correctAnswers', JSON.stringify(correctAnswers));
+localStorage.setItem('questions', JSON.stringify(questions));

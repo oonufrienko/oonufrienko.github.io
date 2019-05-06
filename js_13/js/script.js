@@ -2,35 +2,36 @@
 
 $(function(){
 
-  if (localStorage.getItem('sectionQA')) {
+  if (!localStorage.getItem('questions')) { return; }
 
-    var sectionQA = localStorage.getItem('sectionQA');
+    var questions = JSON.parse(localStorage.getItem('questions'));
 
     var html = $('#content-template').html();
 
     var tmpl = _.template(html);
-    var content = tmpl(sectionQA);
+
+    var content = tmpl(questions);
     
     $('.content').append(content);
     
     $('.btn').on('click', function(){
-      var correctAnswers = JSON.parse(localStorage.getItem('correctAnswers'));
-      var n = 3;
       var sectionNumber = -1;
-      var correctAnswer = -1;
+      var answerNumber = -1;
       var results = {
         id: [ 'вы не отметили', 'вы не отметили', 'вы не отметили' ]
       };
 
       $( '.answers li input' ).each(function( index ) {
         if ($(this).prop('checked')) {
-          sectionNumber = parseInt(index / n);
-          correctAnswer = index - (sectionNumber * n);
-          if (correctAnswers.answerId[sectionNumber] === correctAnswer) {
+          sectionNumber = parseInt(index / questions.length);
+          answerNumber = index - (sectionNumber * questions.length);
+
+          if (questions[sectionNumber].answers[answerNumber].isCorrect) {
             results.id[sectionNumber] = 'верно';
           } else {
-            results.id[sectionNumber] = 'не верно';
+              results.id[sectionNumber] = 'не верно';
           }
+
         }
       });
 
@@ -69,8 +70,6 @@ $(function(){
         }
       });
     }
-
-}
 
 // localStorage.clear();
 
