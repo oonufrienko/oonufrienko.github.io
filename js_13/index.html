@@ -28,8 +28,8 @@
               <% questions[i].answers.forEach( function(elem) { %>
                 <li>
                   <div class="custom-control custom-checkbox">
-                    <input class="custom-control-input" type="checkbox" id=<%="customCheck" + elem.id%> >
-                    <label class="custom-control-label" for=<%="customCheck" + elem.id%> >
+                    <input class="custom-control-input" type="checkbox" id="<%='customCheck' + elem.id%>" >
+                    <label class="custom-control-label" for="<%='customCheck' + elem.id%>" >
                       <%=elem.title%>                          
                     </label>
                   </div>
@@ -50,7 +50,7 @@
       <p class="results-header">Результаты:</p>
       <ol class="results-items">
         <% var n = 1; %>  
-          <% obj.id.forEach( function(i) { %>
+          <% obj.answer.forEach( function(i) { %>
             <li>Вопрос №<%=n%>
               <ul>
                 <li>Ответ: <strong><%=i%></strong></li>
