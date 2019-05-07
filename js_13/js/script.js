@@ -32,12 +32,10 @@ $(function(){
         sectionNumber = parseInt(liIndex / questions.length);
         answerIndex = liIndex - (sectionNumber * questions.length);
   
-        if ( questions[sectionNumber].answers[answerIndex].isCorrect ) {
-          resultObj.answer[sectionNumber] = 'верно';
-        } else {
-          resultObj.answer[sectionNumber] = 'не верно';
-        }
-  
+        resultObj.answer[sectionNumber] = questions[sectionNumber].answers[answerIndex].isCorrect
+        ? 'верно'
+        : 'не верно';
+        
       }
     });
 
