@@ -21,25 +21,23 @@
 
     <script type="text/template" id="content-template">
         <ol class="questions">
-        <% var n = 1; %>
-        <% for(var i=1; i <= sectionQA.answers.length; i++) { %>
+          <% for(var i = 0; i < questions.length; i++) { %>
             <li>
-                <%=sectionQA.question + i %>
-                <ul class="answers">
-                  <% sectionQA.answers.forEach( function(answer) { %>
-                    <li>
-                      <div class="custom-control custom-checkbox">
-                        <input class="custom-control-input" type="checkbox" id=<%="customCheck" + n%> >
-                        <label class="custom-control-label" for=<%="customCheck" + n%> >
-                          <%=answer%>                          
-                          <% n++; %>
-                        </label>
-                      </div>
-                    </li>
+              <%=questions[i].questionTitle%>
+              <ul class="answers">
+              <% questions[i].answers.forEach( function(elem) { %>
+                <li>
+                  <div class="custom-control custom-checkbox">
+                    <input class="custom-control-input" type="checkbox" id="<%='customCheck' + elem.id%>" >
+                    <label class="custom-control-label" for="<%='customCheck' + elem.id%>" >
+                      <%=elem.title%>                          
+                    </label>
+                  </div>
+                </li>
                   <% }) %>
-                </ul>
+              </ul>
             </li>
-        <% } %>    
+            <% } %>     
         </ol>
         <div class="submit-btn">
           <button class="btn btn-secondary btn-lg" type="button">
@@ -51,8 +49,8 @@
     <script type="text/template" id="answers">
       <p class="results-header">Результаты:</p>
       <ol class="results-items">
-        <% var n=1; %>  
-          <% obj.id.forEach( function(i) { %>
+        <% var n = 1; %>  
+          <% obj.answer.forEach( function(i) { %>
             <li>Вопрос №<%=n%>
               <ul>
                 <li>Ответ: <strong><%=i%></strong></li>

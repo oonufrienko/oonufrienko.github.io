@@ -2,76 +2,66 @@
 
 $(function(){
 
-  if (localStorage.getItem('sectionQA')) {
+  if ( !localStorage.getItem('questions') ) { return; }
 
-    var sectionQA = localStorage.getItem('sectionQA');
-
-    var html = $('#content-template').html();
-
-    var tmpl = _.template(html);
-    var content = tmpl(sectionQA);
+  var questions = JSON.parse( localStorage.getItem('questions') );
+  var html = $('#content-template').html();
+  var tmpl = _.template(html);
+  var content = tmpl(questions);
     
-    $('.content').append(content);
+  $('.content').append(content);
     
-    $('.btn').on('click', function(){
-      var correctAnswers = JSON.parse(localStorage.getItem('correctAnswers'));
-      var n = 3;
-      var sectionNumber = -1;
-      var correctAnswer = -1;
-      var results = {
-        id: [ 'вы не отметили', 'вы не отметили', 'вы не отметили' ]
-      };
+  $('.btn').on('click', function() {
+    showModal( defineResults('.answers li input') );
 
-      $( '.answers li input' ).each(function( index ) {
-        if ($(this).prop('checked')) {
-          sectionNumber = parseInt(index / n);
-          correctAnswer = index - (sectionNumber * n);
-          if (correctAnswers.answerId[sectionNumber] === correctAnswer) {
-            results.id[sectionNumber] = 'верно';
-          } else {
-            results.id[sectionNumber] = 'не верно';
-          }
-        }
-      });
-
-      showModal(results);
-
-      $('.result-modal .btn-close').on('click', function () {
-        hideModal();
-      });
-
+    $('.result-modal .btn-close').on('click', function () {
+      hideModal();
     });
 
+  });
+    
+  function defineResults(listElementSelector) {
+    var sectionNumber = -1;
+    var answerIndex = -1;
+    var resultObj = {
+      answer: [ 'вы не отметили', 'вы не отметили', 'вы не отметили' ]
+    };
+  
+    $( listElementSelector ).each(function( liIndex ) {
+      if ( $(this).prop('checked') ) {
+        sectionNumber = parseInt(liIndex / questions.length);
+        answerIndex = liIndex - (sectionNumber * questions.length);
+  
+        resultObj.answer[sectionNumber] = questions[sectionNumber].answers[answerIndex].isCorrect
+        ? 'верно'
+        : 'не верно';
+        
+      }
+    });
 
-    function showModal(result_obj) {
+    return resultObj;
+  }
 
-      $('.content').after('<div class="overlay"></div>');
-      $('.overlay').after('<div class="result-modal"></div>');
+  function showModal(resultObj) {
+    $('.content').after('<div class="overlay"></div>');
+    $('.overlay').after('<div class="result-modal"></div>');
 
-      var htmlAnswerTemplate = $('#answers').html();
+    var htmlAnswerTemplate = $('#answers').html();
+    var tmplFunction = _.template(htmlAnswerTemplate);
+    var resultModalHTML = tmplFunction(resultObj);
 
-      var tmplFunction = _.template(htmlAnswerTemplate);
+    $('.result-modal').append(resultModalHTML);
+    $('.result-modal').show();
+  }
 
-      var resultModalHTML = tmplFunction(result_obj);
-
-      $('.result-modal').append(resultModalHTML);
-
-      $('.result-modal').show();
-
-    }
-
-    function hideModal() {
-      $('div').remove('.overlay');
-      $('div').remove('.result-modal');
-      $( '.answers li input' ).each(function( index ) {
-        if ($(this).prop('checked')) {
-          $(this).prop('checked', false);
-        }
-      });
-    }
-
-}
-
-// localStorage.clear();
+  function hideModal() {
+    $('div').remove('.overlay');
+    $('div').remove('.result-modal');
+    $( '.answers li input' ).each(function( liIndex ) {
+      if ($(this).prop('checked')) {
+        $(this).prop('checked', false);
+      }
+    });
+  }
 
 });
