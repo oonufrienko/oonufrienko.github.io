@@ -10,6 +10,13 @@
     font-size: 24px;
 }
 
+.title-note {
+    text-align: left;
+    margin-left: 100px; 
+    font-weight: 300;
+    font-size: 12px;
+}
+
 .query-field {
     width: 500px;
     border-radius: 3px;
