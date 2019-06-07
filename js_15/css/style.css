@@ -1,3 +1,7 @@
+.body-bg-color {
+    background-color: #dedede;
+}
+
 .wrapper {
     width: 620px;
     margin: 100px auto;
@@ -30,14 +34,16 @@
 }
 
 .search-results {
-    /* width: 1500px; */
     margin: 100px 20% auto 20%;
 }
 
 .search-results ul li {
     float: left;
-    margin: 10px;
+    margin: 15px;
     list-style: none;
+    width: 150px;
+    height: 120px;
+    text-align: center;
 }
 
 .results-title {
