@@ -22,21 +22,16 @@ $(function() {
         url: URL
       })
       .done(function( data ) {
-        // console.log(data);
         if (parseInt(data.totalHits) > 0) {
-          // var items = [];
           var results = {
             items: []
           };
           $.each(data.hits, function( i, hit ) { 
-            // console.log(hit.previewURL);
             results.items.push( "<img src='" + hit.previewURL + "'>" );
           });
-          // debugger;
           var html = $('#content-template').html();
           var tmpl = _.template(html);
           var content = tmpl(results);
-          // var content = tmpl({'items':['1','3','2']});
           
           $('.results-title').show();
           $('.search-results').append(content);
