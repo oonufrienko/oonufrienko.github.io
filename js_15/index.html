@@ -2,9 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Задача 15. Аякс</title>
+    <title>Task 15. Ajax</title>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./js/script.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    Что-то
+    <div class="wrapper">
+      <p class="title">Looking for images? Try here:</p>
+      <input class="query-field" type="text">
+      <button class="btn-search" type="submit">Search</button>
+    </div>
+    <div class="search-results">
+      <p class="results-title">Results:</p>
+
+    </div>
+
+    <script type="text/template" id="content-template">
+        <ul>
+          <% items.forEach( function(item) { %>
+            <li><%=item%></li>
+          <% }); %>
+        </ul>
+    </script>
+
+
 </body>
 </html>

@@ -1,0 +1,38 @@
+.wrapper {
+    width: 620px;
+    margin: 100px auto;
+}
+
+.title {
+    text-align: left;
+    margin-left: 100px; 
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.query-field {
+    width: 500px;
+    border-radius: 3px;
+}
+
+.btn-search {
+    width: 80px;
+    border-radius: 3px;
+    margin-left: 30px;
+    background-color: lightgrey;
+}
+
+.search-results {
+    /* width: 1500px; */
+    margin: 100px 20% auto 20%;
+}
+
+.search-results ul li {
+    float: left;
+    margin: 10px;
+    list-style: none;
+}
+
+.results-title {
+    display: none;
+}
