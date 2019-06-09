@@ -6,7 +6,7 @@ function loadData() {
   while (ul.firstChild) {
     ul.removeChild(ul.firstChild);
   }
-  //  I think that's solution is not optimize. Optimize solution is to add <ul> section in renderData function, then remove it. Not in loop but at once.
+  //  I think that's solution is not optimize. Optimize solution is to add <ul> section in renderData function, then remove it. Not in loop but at once if it exists.
   var xhr = new XMLHttpRequest();
   var queryString = document.getElementsByClassName('query-field')[0].value;
 
