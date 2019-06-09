@@ -1,7 +1,7 @@
 'use strict'
 
 function loadData() {
-  // clear the result section
+  // clear the result section. show/hide Result word
   
   //   
   var xhr = new XMLHttpRequest();
@@ -17,7 +17,7 @@ function loadData() {
     if (xhr.readyState != 4) { return; }
 
     if (xhr.status != 200) {
-      // show the error
+      // show the error. Remake it, to output in result section
       alert( xhr.status + ': ' + xhr.statusText );
     } else {
         var items = JSON.parse(xhr.responseText);
