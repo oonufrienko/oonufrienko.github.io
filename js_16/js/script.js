@@ -12,14 +12,14 @@ function loadData() {
 
   var resultWord = document.getElementsByClassName('results-title')[0];  
   resultWord.style.display = 'none';
-  if ( resultWord.firstElementChild ) {
+  if (resultWord.firstElementChild) {
     resultWord.removeChild(resultWord.firstElementChild);
   }
   // End of clearing result section 
 
   var queryString = document.getElementsByClassName('query-field')[0].value;
 
-  if ( !queryString ) {
+  if (!queryString) {
     checkForNoHitsSection();
     return; 
   }
@@ -46,7 +46,7 @@ function renderData(items) {
   var resultSection = document.getElementsByClassName('search-results')[0];
   var list = resultSection.getElementsByTagName('ul')[0];
 
-  if ( items.hits.length < 1 ) { 
+  if (items.hits.length < 1) { 
     checkForNoHitsSection();
     return; 
   }
@@ -65,7 +65,7 @@ function checkForNoHitsSection() {
   var resultWord = document.getElementsByClassName('results-title')[0];
   resultWord.style.display = 'block';
 
-  if ( !resultWord.firstElementChild ) {
+  if (!resultWord.firstElementChild) {
     var resultNoHits = document.createElement('p');
     resultNoHits.innerHTML = 'No hits'
     resultWord.appendChild(resultNoHits);
@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var searchField = document.getElementsByClassName('query-field')[0];
   searchField.addEventListener('keypress', function (e) {
     if (e.keyCode === 13) {
-        loadData();
+      loadData();
     }
   });
 
