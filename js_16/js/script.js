@@ -54,6 +54,18 @@ function renderData(items) {
   var resultSection = document.getElementsByClassName('search-results')[0];
   var list = resultSection.getElementsByTagName('ul')[0];
 
+  if ( items.hits.length < 1 ) { 
+    var resultWord = document.getElementsByClassName('results-title')[0];
+    resultWord.style.display = 'block';
+
+    if ( !resultWord.firstElementChild ) {
+      var resultNoHits = document.createElement('p');
+      resultNoHits.innerHTML = 'No hits'
+      resultWord.appendChild(resultNoHits);
+    }
+    return; 
+  }
+
   items.hits.forEach(function(item) {
     var li = list.appendChild(document.createElement('li'));
     var img = document.createElement('img');
