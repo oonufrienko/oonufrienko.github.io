@@ -2,8 +2,11 @@
 
 function loadData() {
   // clear the result section. show/hide Result word
-  
-  //   
+  var ul = document.getElementsByTagName('ul')[0];
+  while (ul.firstChild) {
+    ul.removeChild(ul.firstChild);
+  }
+  //  I think that's solution is not optimize. Optimize solution is to add <ul> section in renderData function, then remove it. Not in loop but at once.
   var xhr = new XMLHttpRequest();
   var queryString = document.getElementsByClassName('query-field')[0].value;
 
@@ -23,9 +26,7 @@ function loadData() {
         var items = JSON.parse(xhr.responseText);
         renderData(items);
     }
-
   }
-
 }
 
 function renderData(items) {
