@@ -20,7 +20,7 @@ function loadData() {
   var queryString = document.getElementsByClassName('query-field')[0].value;
 
   if (!queryString) {
-    checkForNoHitsSection();
+    toggleVisibilityNoHitsSection();
     return; 
   }
 
@@ -47,7 +47,7 @@ function renderData(items) {
   var list = resultSection.getElementsByTagName('ul')[0];
 
   if (items.hits.length < 1) { 
-    checkForNoHitsSection();
+    toggleVisibilityNoHitsSection();
     return; 
   }
 
@@ -61,7 +61,7 @@ function renderData(items) {
   resultWord.style.display = 'block';
 }
 
-function checkForNoHitsSection() {
+function toggleVisibilityNoHitsSection() {
   var resultWord = document.getElementsByClassName('results-title')[0];
   resultWord.style.display = 'block';
 
