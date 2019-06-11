@@ -1,1 +1,1 @@
-Task is based on JS_16 and relates to improve your Grunt usage skills
+Task is based on JS_16 and relates to improve my Grunt usage skills
