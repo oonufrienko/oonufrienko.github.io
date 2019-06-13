@@ -6,21 +6,21 @@ module.exports = function(grunt) {
         separator: ';'
       },
       dist: {
-        src: ['js/src/*.js'],
-        dest: 'js/dist/script.min.js'
+        src: ['src/js/*.js'],
+        dest: 'dist/js/script.min.js'
         }
       },
     concat_css: {
       options: {},
       all: {
-        src: ['css/src/*.css'],
-        dest: 'css/dist/styles.min.css'
+        src: ['src/css/*.css'],
+        dest: 'dist/css/styles.min.css'
       }
     },
     uglify: {
       dist: {
-        src: ['js/dist/script.min.js'],
-        dest: 'js/dist/script.min.js'
+        src: ['dist/js/script.min.js'],
+        dest: 'dist/js/script.min.js'
         }
       },
     cssmin: {
@@ -30,7 +30,7 @@ module.exports = function(grunt) {
       },
       target: {
         files: {
-          'css/dist/styles.min.css': ['css/dist/styles.min.css']
+          'dist/css/styles.min.css': ['dist/css/styles.min.css']
         }
       }
     }
@@ -40,8 +40,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-concat-css');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
-
-//   grunt.loadNpmTasks('grunt-contrib-watch');
 
   grunt.registerTask('default', ['concat', 'uglify', 'concat_css', 'cssmin']);
 
