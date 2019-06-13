@@ -40,9 +40,8 @@ $(function() {
     var URL = 'https://pixabay.com/api?key=12682041-c02212121d8f52a952705a821&q=' + queryString + '&image_type=photo';
 
     $.ajax({
-        url: URL
-      })
-      .done( function (data) {renderData(data);} );
+      url: URL
+    }).done( function (data) {renderData(data);} );
   }
 
   $('.btn-search').on('click', queryHandler);
@@ -50,6 +49,6 @@ $(function() {
     if(e.which === 13) {
       queryHandler();
     }
-});
+  });
 
 });
