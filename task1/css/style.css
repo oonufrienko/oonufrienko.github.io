@@ -1,0 +1,51 @@
+.body-bg-color {
+    background-color: #dedede;
+}
+
+.wrapper {
+    width: 620px;
+    margin: 100px auto;
+}
+
+.title {
+    text-align: left;
+    margin-left: 100px; 
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.title-note {
+    text-align: left;
+    margin-left: 100px; 
+    font-weight: 300;
+    font-size: 12px;
+}
+
+.query-field {
+    width: 500px;
+    border-radius: 3px;
+}
+
+.btn-search {
+    width: 80px;
+    border-radius: 3px;
+    margin-left: 30px;
+    background-color: lightgrey;
+}
+
+.search-results {
+    margin: 100px 20% auto 20%;
+}
+
+.search-results ul li {
+    float: left;
+    margin: 15px;
+    list-style: none;
+    /* width: 150px; */
+    height: 120px;
+    text-align: center;
+}
+
+.results-title {
+    display: none;
+}
